@@ -57,5 +57,5 @@ variable "image_tag" {
 variable "github_repo" {
   description = "owner/repo allowed to deploy via GitHub Actions OIDC. Empty string disables the OIDC role."
   type        = string
-  default     = "riccoljy/cs5224"
+  default     = "riccoljy/Cloud-Computing-SaaS"
 }
