@@ -1,0 +1,59 @@
+name: build-and-deploy
+
+on:
+  push:
+    branches: [main]
+    paths: ['api/**', 'web/**', '.github/workflows/deploy.yml']
+  workflow_dispatch:
+
+permissions:
+  id-token: write # OIDC to AWS
+  contents: read
+
+env:
+  AWS_REGION: ap-southeast-1
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: API install + syntax check
+        working-directory: api
+        run: npm ci && for f in $(find src -name '*.js'); do node --check "$f"; done
+      - name: SPA build
+        working-directory: web
+        run: npm ci && npm run build
+      - uses: actions/upload-artifact@v4
+        with: { name: web-dist, path: web/dist }
+
+  deploy:
+    needs: build
+    if: vars.AWS_DEPLOY_ROLE_ARN != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: web-dist, path: web/dist }
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+      - id: ecr
+        uses: aws-actions/amazon-ecr-login@v2
+      # t4g instances are arm64; free arm64 runners are public-repo only, so cross-build via QEMU.
+      - uses: docker/setup-qemu-action@v3
+      - uses: docker/setup-buildx-action@v3
+      - name: Push image
+        run: |
+          REPO=${{ steps.ecr.outputs.registry }}/cs5224-t17-api
+          docker buildx build --platform linux/arm64 --push -t $REPO:latest -t $REPO:${GITHUB_SHA::7} api
+      - name: Upload SPA
+        run: |
+          aws s3 sync web/dist/assets s3://${{ vars.WEB_BUCKET }}/assets --cache-control "public,max-age=31536000,immutable"
+          aws s3 sync web/dist s3://${{ vars.WEB_BUCKET }} --delete --exclude "assets/*" --cache-control "no-cache"
+          aws cloudfront create-invalidation --distribution-id ${{ vars.CLOUDFRONT_ID }} --paths "/*"
+      - name: Roll instances
+        run: aws autoscaling start-instance-refresh --auto-scaling-group-name cs5224-t17-app

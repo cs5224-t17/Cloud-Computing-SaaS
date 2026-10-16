@@ -1,0 +1,66 @@
+# On-premise equivalent of the AWS deployment, on a single server:
+#   CloudFront+S3 -> Nginx (web)   | EC2+ALB -> api container | RDS -> postgres
+#   SQS -> jobs table (QUEUE_DRIVER=pg) | SES -> SMTP relay (Mailpit here; inbox UI on :8025)
+#   S3 media -> local volume
+# Run from repo root:  docker compose -f deploy/onprem/docker-compose.yml up --build
+name: hbb-onprem
+
+x-api-env: &api-env
+  PGHOST: postgres
+  PGDATABASE: hbb
+  PGUSER: hbb
+  PGPASSWORD: ${PGPASSWORD:-hbb-onprem}
+  JWT_SECRET: ${JWT_SECRET:-change-me-onprem}
+  ADMIN_TOKEN: ${ADMIN_TOKEN:-onprem-admin}
+  APP_BASE_URL: ${APP_BASE_URL:-http://localhost:8080}
+  QUEUE_DRIVER: pg
+  MAIL_DRIVER: smtp
+  SMTP_HOST: mailpit
+  SMTP_PORT: "1025"
+  MAIL_FROM: no-reply@hbb.local
+  STORAGE_DRIVER: local
+  LOCAL_MEDIA_DIR: /data/media
+  MEDIA_BASE_URL: /media
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: hbb
+      POSTGRES_USER: hbb
+      POSTGRES_PASSWORD: ${PGPASSWORD:-hbb-onprem}
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hbb"]
+      interval: 3s
+      retries: 20
+    restart: unless-stopped
+
+  api:
+    build: ../../api
+    environment: *api-env
+    volumes: [media:/data/media]
+    depends_on: { postgres: { condition: service_healthy } }
+    restart: unless-stopped
+
+  worker:
+    build: ../../api
+    command: ["node", "src/worker.js"]
+    environment: *api-env
+    depends_on: { api: { condition: service_started } }
+    restart: unless-stopped
+
+  web:
+    build: ../../web
+    ports: ["8080:80"]
+    depends_on: [api]
+    restart: unless-stopped
+
+  mailpit:
+    image: axllent/mailpit:v1.21
+    ports: ["8025:8025"]
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  media:

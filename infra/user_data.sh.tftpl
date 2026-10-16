@@ -1,0 +1,46 @@
+#!/bin/bash
+# Boots an API instance: Docker + api and worker containers from ECR, secrets from SSM, logs to CloudWatch.
+set -euo pipefail
+exec > >(tee /var/log/user-data.log) 2>&1
+
+dnf install -y docker
+systemctl enable --now docker
+
+param() { aws ssm get-parameter --region ${region} --with-decryption --name "/${project}/$1" --query Parameter.Value --output text; }
+
+umask 077
+cat > /etc/hbb.env <<EOF
+NODE_ENV=production
+PORT=3000
+AWS_REGION=${region}
+APP_BASE_URL=${app_base_url}
+PGHOST=${db_host}
+PGDATABASE=hbb
+PGUSER=hbb
+PGPASSWORD=$(param db_password)
+PGSSL=true
+JWT_SECRET=$(param jwt_secret)
+ADMIN_TOKEN=$(param admin_token)
+QUEUE_DRIVER=sqs
+SQS_QUEUE_URL=${queue_url}
+MAIL_DRIVER=ses
+MAIL_FROM=${mail_from}
+STORAGE_DRIVER=s3
+MEDIA_BUCKET=${media_bucket}
+MEDIA_BASE_URL=/media
+EOF
+
+# Image may not be pushed yet on the very first apply; keep retrying.
+until aws ecr get-login-password --region ${region} | docker login --username AWS --password-stdin ${registry} \
+      && docker pull ${image}; do
+  echo "waiting for image ${image}..."; sleep 20
+done
+
+IID=$(TOKEN=$(curl -sX PUT http://169.254.169.254/latest/api/token -H 'X-aws-ec2-metadata-token-ttl-seconds: 60'); \
+      curl -s -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/instance-id)
+LOG="--log-driver=awslogs --log-opt awslogs-region=${region} --log-opt awslogs-group=${log_group}"
+
+docker run -d --name api --restart always --env-file /etc/hbb.env -p 3000:3000 \
+  $LOG --log-opt awslogs-stream=$IID/api ${image}
+docker run -d --name worker --restart always --env-file /etc/hbb.env \
+  $LOG --log-opt awslogs-stream=$IID/worker ${image} node src/worker.js

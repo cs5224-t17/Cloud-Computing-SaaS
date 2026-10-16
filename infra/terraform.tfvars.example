@@ -1,0 +1,5 @@
+# Copy to terraform.tfvars (git-ignored) and fill in.
+# SES sandbox: each address gets a verification email from AWS and must click the link.
+# First address is the From address for all app email.
+ses_emails   = ["e1113223@u.nus.edu", "teammate2@u.nus.edu"]
+alert_emails = ["e1113223@u.nus.edu"]
