@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { api, DAY_NAMES } from '../api.js';
 
 const blankHours = () => DAY_NAMES.map((_, day) => ({ day, open: '10:00', close: '18:00', closed: false }));
+const msgClass = (m) => (!m || m === 'Saving…' ? 'muted' : m.startsWith('Saved') ? 'ok-msg' : 'error');
 
 export default function Manage() {
   const { slug } = useParams();
@@ -12,15 +13,16 @@ export default function Manage() {
   const [hours, setHours] = useState(blankHours());
   const [msg, setMsg] = useState({});
 
-  const load = async () => {
+  // Reload from the server, but only reset the form that was just saved so unsaved edits in the other forms survive.
+  const load = async (section) => {
     const d = await api(`/businesses/${slug}`);
     setB(d);
-    setDetails({
+    if (!section || section === 'details') setDetails({
       description: d.description, contact_phone: d.contact_phone ?? '', instagram: d.instagram ?? '',
       website: d.website ?? '', is_available: d.is_available,
     });
-    setServices(d.services.map(({ name, description, price_from }) => ({ name, description, price_from: price_from ?? '' })));
-    if (d.hours.length === 7) setHours(d.hours.map((h) => ({ ...h, open: h.open ?? '', close: h.close ?? '' })));
+    if (!section || section === 'services') setServices(d.services.map(({ name, description, price_from }) => ({ name, description, price_from: price_from ?? '' })));
+    if ((!section || section === 'hours') && d.hours.length === 7) setHours(d.hours.map((h) => ({ ...h, open: h.open ?? '', close: h.close ?? '' })));
   };
   useEffect(() => { load().catch((e) => setMsg({ top: e.message })); }, [slug]);
 
@@ -31,7 +33,7 @@ export default function Manage() {
   const save = (key, fn) => async (e) => {
     e?.preventDefault();
     setMsg((m) => ({ ...m, [key]: 'Saving…' }));
-    try { await fn(); await load(); setMsg((m) => ({ ...m, [key]: 'Saved — followers will be notified.' })); }
+    try { await fn(); await load(key); setMsg((m) => ({ ...m, [key]: 'Saved — followers will be notified.' })); }
     catch (err) { setMsg((m) => ({ ...m, [key]: err.message })); }
   };
   const setSvc = (i, k, v) => setServices(services.map((s, j) => (j === i ? { ...s, [k]: v } : s)));
@@ -63,7 +65,7 @@ export default function Manage() {
           <label>Instagram<input value={details.instagram} onChange={(e) => setDetails({ ...details, instagram: e.target.value })} /></label>
           <label>Website<input value={details.website} onChange={(e) => setDetails({ ...details, website: e.target.value })} /></label>
         </div>
-        <button className="btn">Save details</button> <span className="muted">{msg.details}</span>
+        <button className="btn">Save details</button> <span className={msgClass(msg.details)}>{msg.details}</span>
       </form>
 
       <form className="panel wide" onSubmit={save('services', () => api(`/businesses/${b.id}/services`, { method: 'PUT', body: { services } }))}>
@@ -77,7 +79,7 @@ export default function Manage() {
           </div>
         ))}
         <button type="button" className="btn ghost" onClick={() => setServices([...services, { name: '', description: '', price_from: '' }])}>+ Add service</button>{' '}
-        <button className="btn">Save services</button> <span className="muted">{msg.services}</span>
+        <button className="btn">Save services</button> <span className={msgClass(msg.services)}>{msg.services}</span>
       </form>
 
       <form className="panel wide" onSubmit={save('hours', () => api(`/businesses/${b.id}/hours`, { method: 'PUT', body: { hours } }))}>
@@ -92,7 +94,7 @@ export default function Manage() {
             </>}
           </div>
         ))}
-        <button className="btn">Save hours</button> <span className="muted">{msg.hours}</span>
+        <button className="btn">Save hours</button> <span className={msgClass(msg.hours)}>{msg.hours}</span>
       </form>
 
       <div className="panel wide">
@@ -105,7 +107,7 @@ export default function Manage() {
             </figure>
           ))}
         </div>
-        <input type="file" accept="image/jpeg,image/png,image/webp" onChange={uploadPhoto} /> <span className="muted">{msg.photos}</span>
+        <input type="file" accept="image/jpeg,image/png,image/webp" onChange={uploadPhoto} /> <span className={msgClass(msg.photos)}>{msg.photos}</span>
       </div>
     </div>
   );
