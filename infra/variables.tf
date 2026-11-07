@@ -54,6 +54,12 @@ variable "image_tag" {
   default = "latest"
 }
 
+variable "enable_cloudfront" {
+  description = "false = ALB is the public URL (HTTP) and the API serves the SPA/photos from S3. The account is not yet verified for CloudFront."
+  type        = bool
+  default     = false
+}
+
 variable "github_repo" {
   description = "owner/repo allowed to deploy via GitHub Actions OIDC. Empty string disables the OIDC role."
   type        = string

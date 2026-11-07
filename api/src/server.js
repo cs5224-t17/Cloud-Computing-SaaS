@@ -4,6 +4,7 @@ import { config } from './config.js';
 import { migrate, query } from './db.js';
 import { requireAdmin } from './auth.js';
 import { importCsv } from './importer.js';
+import { getS3Object } from './storage.js';
 import authRoutes from './routes/auth.js';
 import businessRoutes from './routes/businesses.js';
 
@@ -32,6 +33,24 @@ app.post('/api/admin/import', requireAdmin, express.text({ type: ['text/csv', 't
 // Local storage mode serves uploaded photos itself (on AWS these come from CloudFront/S3).
 if (config.storageDriver === 'local') {
   app.use('/media', express.static(config.localMediaDir, { maxAge: '365d', immutable: true }));
+}
+
+// No-CloudFront fallback: stream the SPA and photos from S3 through the API.
+// shortcut: no edge caching or HTTPS; remove once CloudFront is allowed on the account.
+if (config.webBucket) {
+  const fromS3 = (bucket, keyOf) => async (req, res) => {
+    try {
+      const o = await getS3Object(bucket, keyOf(req));
+      res.set({ 'Content-Type': o.ContentType, 'Cache-Control': o.CacheControl ?? 'no-cache' });
+      o.Body.pipe(res);
+    } catch (e) {
+      if (e.name === 'NoSuchKey') return res.status(404).end();
+      throw e;
+    }
+  };
+  app.get('/media/*key', fromS3(config.mediaBucket, (r) => `media/${r.params.key.join('/')}`));
+  // Same rule as the CloudFront function: extension-less paths are SPA routes.
+  app.get(/^\/(?!api\/).*/, fromS3(config.webBucket, (r) => (r.path.includes('.') ? r.path.slice(1) : 'index.html')));
 }
 
 app.use((_req, res) => res.status(404).json({ error: 'Not found' }));

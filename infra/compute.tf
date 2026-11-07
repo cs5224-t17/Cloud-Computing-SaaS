@@ -29,7 +29,10 @@ resource "aws_iam_role_policy" "app" {
       { Effect = "Allow", Action = ["sqs:SendMessage", "sqs:ReceiveMessage", "sqs:DeleteMessage", "sqs:GetQueueAttributes"],
       Resource = aws_sqs_queue.events.arn },
       { Effect = "Allow", Action = ["ses:SendEmail"], Resource = "*" },
-      { Effect = "Allow", Action = ["s3:PutObject", "s3:DeleteObject"], Resource = "${aws_s3_bucket.media.arn}/media/*" },
+      { Effect = "Allow", Action = ["s3:PutObject", "s3:DeleteObject", "s3:GetObject"], Resource = "${aws_s3_bucket.media.arn}/media/*" },
+      { Effect = "Allow", Action = ["s3:GetObject"], Resource = "${aws_s3_bucket.web.arn}/*" },
+      # ListBucket makes missing keys return NoSuchKey (404) instead of AccessDenied
+      { Effect = "Allow", Action = ["s3:ListBucket"], Resource = [aws_s3_bucket.web.arn, aws_s3_bucket.media.arn] },
       { Effect = "Allow", Action = ["logs:CreateLogStream", "logs:PutLogEvents"], Resource = "${aws_cloudwatch_log_group.app.arn}:*" },
     ]
   })
@@ -69,7 +72,8 @@ resource "aws_launch_template" "app" {
     queue_url    = aws_sqs_queue.events.url
     media_bucket = aws_s3_bucket.media.bucket
     mail_from    = var.ses_emails[0]
-    app_base_url = "https://${aws_cloudfront_distribution.cdn.domain_name}"
+    web_bucket   = var.enable_cloudfront ? "" : aws_s3_bucket.web.bucket
+    app_base_url = local.app_url
   }))
 
   tag_specifications {

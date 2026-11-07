@@ -35,7 +35,7 @@ resource "aws_cloudfront_origin_access_control" "s3" {
 }
 
 data "aws_iam_policy_document" "cf_read" {
-  for_each = { web = aws_s3_bucket.web.arn, media = aws_s3_bucket.media.arn }
+  for_each = var.enable_cloudfront ? { web = aws_s3_bucket.web.arn, media = aws_s3_bucket.media.arn } : {}
   statement {
     actions   = ["s3:GetObject"]
     resources = ["${each.value}/*"]
@@ -46,18 +46,20 @@ data "aws_iam_policy_document" "cf_read" {
     condition {
       test     = "StringEquals"
       variable = "AWS:SourceArn"
-      values   = [aws_cloudfront_distribution.cdn.arn]
+      values   = [aws_cloudfront_distribution.cdn[0].arn]
     }
   }
 }
 
 resource "aws_s3_bucket_policy" "web" {
+  count      = var.enable_cloudfront ? 1 : 0
   bucket     = aws_s3_bucket.web.id
   policy     = data.aws_iam_policy_document.cf_read["web"].json
   depends_on = [aws_s3_bucket_public_access_block.web]
 }
 
 resource "aws_s3_bucket_policy" "media" {
+  count      = var.enable_cloudfront ? 1 : 0
   bucket     = aws_s3_bucket.media.id
   policy     = data.aws_iam_policy_document.cf_read["media"].json
   depends_on = [aws_s3_bucket_public_access_block.media]
@@ -83,6 +85,7 @@ data "aws_cloudfront_cache_policy" "disabled" { name = "Managed-CachingDisabled"
 data "aws_cloudfront_origin_request_policy" "all_but_host" { name = "Managed-AllViewerExceptHostHeader" }
 
 resource "aws_cloudfront_distribution" "cdn" {
+  count               = var.enable_cloudfront ? 1 : 0
   enabled             = true
   comment             = "${local.name} SPA + media + API"
   default_root_object = "index.html"

@@ -33,7 +33,7 @@ resource "aws_iam_role_policy" "deploy" {
   role  = aws_iam_role.deploy[0].id
   policy = jsonencode({
     Version = "2012-10-17"
-    Statement = [
+    Statement = concat([
       { Effect = "Allow", Action = "ecr:GetAuthorizationToken", Resource = "*" },
       { Effect = "Allow", Resource = aws_ecr_repository.api.arn, Action = [
         "ecr:BatchCheckLayerAvailability", "ecr:InitiateLayerUpload", "ecr:UploadLayerPart",
@@ -41,8 +41,9 @@ resource "aws_iam_role_policy" "deploy" {
       ] },
       { Effect = "Allow", Action = ["s3:ListBucket"], Resource = aws_s3_bucket.web.arn },
       { Effect = "Allow", Action = ["s3:PutObject", "s3:DeleteObject"], Resource = "${aws_s3_bucket.web.arn}/*" },
-      { Effect = "Allow", Action = "cloudfront:CreateInvalidation", Resource = aws_cloudfront_distribution.cdn.arn },
       { Effect = "Allow", Action = "autoscaling:StartInstanceRefresh", Resource = aws_autoscaling_group.app.arn },
-    ]
+      ], var.enable_cloudfront ? [
+      { Effect = "Allow", Action = "cloudfront:CreateInvalidation", Resource = aws_cloudfront_distribution.cdn[0].arn },
+    ] : [])
   })
 }

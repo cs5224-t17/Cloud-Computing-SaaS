@@ -34,4 +34,6 @@ export const config = {
   mediaBucket: env('MEDIA_BUCKET', ''),
   mediaBaseUrl: env('MEDIA_BASE_URL', '/media'),
   localMediaDir: env('LOCAL_MEDIA_DIR', './media'),
+  // Set only when there is no CloudFront: the API then serves the SPA from this bucket.
+  webBucket: env('WEB_BUCKET', ''),
 };

@@ -1,9 +1,9 @@
-output "app_url" { value = "https://${aws_cloudfront_distribution.cdn.domain_name}" }
+output "app_url" { value = local.app_url }
 output "alb_url" { value = "http://${aws_lb.api.dns_name}" }
 output "ecr_repo" { value = aws_ecr_repository.api.repository_url }
 output "web_bucket" { value = aws_s3_bucket.web.bucket }
 output "media_bucket" { value = aws_s3_bucket.media.bucket }
-output "cloudfront_id" { value = aws_cloudfront_distribution.cdn.id }
+output "cloudfront_id" { value = var.enable_cloudfront ? aws_cloudfront_distribution.cdn[0].id : "" }
 output "asg_name" { value = aws_autoscaling_group.app.name }
 output "db_endpoint" { value = aws_db_instance.db.address }
 output "dashboard_url" {

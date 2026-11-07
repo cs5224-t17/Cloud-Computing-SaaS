@@ -4,6 +4,8 @@ export AWS_PROFILE ?= cs5224
 export AWS_REGION  ?= ap-southeast-1
 
 TF      := terraform -chdir=infra
+# Terraform's own SSO refresh is flaky; hand it the CLI's short-lived creds instead.
+TF_AUTH := eval "$$(aws configure export-credentials --format env)" && unset AWS_PROFILE &&
 out      = $(shell $(TF) output -raw $(1))
 GIT_SHA := $(shell git rev-parse --short HEAD)
 
@@ -24,10 +26,10 @@ up: check bootstrap push apply web seed ## First-time deploy of everything
 
 bootstrap: check ## Create the ECR repo first so the image can be pushed before instances boot
 	$(TF) init -input=false
-	$(TF) apply -input=false -auto-approve -target=aws_ecr_repository.api
+	$(TF_AUTH) $(TF) apply -input=false -auto-approve -target=aws_ecr_repository.api
 
 apply: check ## terraform apply (shows plan, asks to confirm)
-	$(TF) apply -input=false
+	$(TF_AUTH) $(TF) apply -input=false
 
 push: check ## Build the API/worker image (linux/arm64) and push to ECR
 	$(eval REPO := $(call out,ecr_repo))
@@ -39,7 +41,8 @@ web: check ## Build the SPA, upload to S3, invalidate CloudFront
 	cd web && npm ci && npm run build
 	aws s3 sync web/dist/assets s3://$(call out,web_bucket)/assets --cache-control "public,max-age=31536000,immutable"
 	aws s3 sync web/dist s3://$(call out,web_bucket) --delete --exclude "assets/*" --cache-control "no-cache"
-	aws cloudfront create-invalidation --distribution-id $(call out,cloudfront_id) --paths "/*" --query Invalidation.Id --output text
+	$(eval CF := $(call out,cloudfront_id))
+	$(if $(CF),aws cloudfront create-invalidation --distribution-id $(CF) --paths "/*" --query Invalidation.Id --output text,@echo "no CloudFront: API serves the SPA from S3")
 
 seed: check ## Import seed/listings.csv through the admin endpoint (waits for the API to be healthy)
 	$(eval URL := $(call out,app_url))
@@ -70,7 +73,7 @@ outputs:
 	@$(TF) output
 
 destroy: check ## Tear down ALL AWS resources (asks to confirm)
-	$(TF) destroy -input=false
+	$(TF_AUTH) $(TF) destroy -input=false
 
 onprem-up: ## Run the on-prem equivalent locally (http://localhost:8080, mail UI :8025)
 	docker compose -f deploy/onprem/docker-compose.yml up --build -d

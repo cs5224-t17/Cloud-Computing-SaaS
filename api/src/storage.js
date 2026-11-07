@@ -1,4 +1,4 @@
-import { S3Client, PutObjectCommand, DeleteObjectCommand } from '@aws-sdk/client-s3';
+import { S3Client, PutObjectCommand, DeleteObjectCommand, GetObjectCommand } from '@aws-sdk/client-s3';
 import { mkdir, writeFile, unlink } from 'node:fs/promises';
 import path from 'node:path';
 import { config } from './config.js';
@@ -20,6 +20,8 @@ export async function putObject(key, body, contentType) {
   }
   return `${config.mediaBaseUrl}/${key}`;
 }
+
+export const getS3Object = (bucket, key) => s3.send(new GetObjectCommand({ Bucket: bucket, Key: key }));
 
 export async function deleteObject(key) {
   if (s3) await s3.send(new DeleteObjectCommand({ Bucket: config.mediaBucket, Key: s3Key(key) }));

@@ -21,4 +21,7 @@ data "aws_availability_zones" "azs" { state = "available" }
 locals {
   name = "${var.project}-t17" # resource-name prefix: cs5224-t17-*
   azs  = slice(data.aws_availability_zones.azs.names, 0, 2)
+  app_url = (var.enable_cloudfront
+    ? "https://${aws_cloudfront_distribution.cdn[0].domain_name}"
+  : "http://${aws_lb.api.dns_name}")
 }
