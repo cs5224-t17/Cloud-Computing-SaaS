@@ -51,7 +51,9 @@ export default function Home() {
       </section>
 
       {error && <p className="error">{error}</p>}
+      {!data && !error && <p className="muted">Loading…</p>}
       {data && <p className="muted">{data.total} listing{data.total === 1 ? '' : 's'}</p>}
+      {data && data.results.length === 0 && <p className="muted">No listings match your search. Try different words or clear the filters.</p>}
 
       <div className="grid">
         {data?.results.map((b) => (

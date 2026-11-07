@@ -9,6 +9,8 @@ export default function Listing({ user }) {
   const [claim, setClaim] = useState(null); // null | { sentTo } | 'done'
   const [code, setCode] = useState('');
   const [msg, setMsg] = useState('');
+  const [claimMsg, setClaimMsg] = useState('');
+  const [busy, setBusy] = useState(false);
 
   const load = () => api(`/businesses/${slug}`).then(setB).catch((e) => setError(e.message));
   useEffect(() => { load(); }, [slug, user?.id]);
@@ -24,14 +26,19 @@ export default function Listing({ user }) {
     } catch (e) { setMsg(e.message); }
   };
   const startClaim = async () => {
-    setMsg('');
-    try { setClaim(await api(`/businesses/${b.id}/claim`, { method: 'POST' })); } catch (e) { setMsg(e.message); }
+    setClaimMsg('');
+    setCode('');
+    setBusy(true);
+    try { setClaim(await api(`/businesses/${b.id}/claim`, { method: 'POST' })); } catch (e) { setClaimMsg(e.message); }
+    setBusy(false);
   };
   const verifyClaim = async (e) => {
     e.preventDefault();
-    setMsg('');
+    setClaimMsg('');
+    setBusy(true);
     try { await api(`/businesses/${b.id}/claim/verify`, { method: 'POST', body: { code } }); setClaim('done'); await load(); }
-    catch (err) { setMsg(err.message); }
+    catch (err) { setClaimMsg(err.message); }
+    setBusy(false);
   };
 
   return (
@@ -83,13 +90,15 @@ export default function Listing({ user }) {
         </section>
         <section>
           <h2>Hours</h2>
-          <table className="table">
-            <tbody>
-              {b.hours.map((h) => (
-                <tr key={h.day}><td>{DAY_NAMES[h.day]}</td><td className="right">{h.closed ? 'Closed' : `${h.open}–${h.close}`}</td></tr>
-              ))}
-            </tbody>
-          </table>
+          {b.hours.every((h) => h.closed) ? <p className="muted">Hours not listed yet. Please contact the business to check.</p> : (
+            <table className="table">
+              <tbody>
+                {b.hours.map((h) => (
+                  <tr key={h.day}><td>{DAY_NAMES[h.day]}</td><td className="right">{h.closed ? 'Closed' : `${h.open}–${h.close}`}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          )}
           <h2>Contact</h2>
           <ul className="plain">
             {b.contact_phone && <li>📞 {b.contact_phone}</li>}
@@ -106,19 +115,22 @@ export default function Listing({ user }) {
           {user && !claim && (
             <>
               <p className="muted">We'll email a 6-digit code to the contact address we have on file for this business.</p>
-              <button className="btn ghost" onClick={startClaim}>Claim this listing</button>
+              <button className="btn ghost" onClick={startClaim} disabled={busy}>{busy ? 'Sending…' : 'Claim this listing'}</button>
             </>
           )}
           {user && claim && claim !== 'done' && (
             <form onSubmit={verifyClaim} className="inline">
               <span>Code sent to {claim.sentTo}.</span>
-              <input value={code} onChange={(e) => setCode(e.target.value)} placeholder="6-digit code" maxLength={6} />
-              <button className="btn">Verify</button>
+              <input value={code} onChange={(e) => setCode(e.target.value.replace(/\D/g, ''))} placeholder="6-digit code"
+                maxLength={6} inputMode="numeric" autoComplete="one-time-code" required />
+              <button className="btn" disabled={busy || code.length !== 6}>Verify</button>
+              <button type="button" className="link" onClick={startClaim} disabled={busy}>Send a new code</button>
             </form>
           )}
+          {claimMsg && <p className="error">{claimMsg}</p>}
         </section>
       )}
-      {claim === 'done' && <p className="ok-msg">Listing claimed. <Link to={`/b/${b.slug}/manage`}>Manage it now →</Link></p>}
+      {claim === 'done' && <section className="claim"><p className="ok-msg">Listing claimed. <Link to={`/b/${b.slug}/manage`}>Manage it now →</Link></p></section>}
     </article>
   );
 }
