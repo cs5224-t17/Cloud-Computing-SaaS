@@ -25,10 +25,16 @@ function parseHours(s) {
 
 // Upserts listings by slug. Used for the initial seed and later for scraped/provider feeds (source column).
 // Claimed listings keep owner-edited fields; only unclaimed ones are overwritten.
-export async function importCsv(text, source = 'seed') {
+// replace=true also deletes unclaimed listings that are not in this CSV.
+export async function importCsv(text, source = 'seed', replace = false) {
   const records = parse(text, { columns: true, skip_empty_lines: true, trim: true });
-  let inserted = 0, updated = 0, skipped = 0;
+  let inserted = 0, updated = 0, skipped = 0, deleted = 0;
   await tx(async (c) => {
+    if (replace) {
+      const slugs = records.map((r) => r.slug || slugify(r.name ?? ''));
+      ({ rowCount: deleted } = await c.query(
+        'DELETE FROM businesses WHERE owner_id IS NULL AND NOT (slug = ANY($1))', [slugs]));
+    }
     for (const r of records) {
       if (!r.name || !r.category || !r.area) { skipped++; continue; }
       const slug = r.slug || slugify(r.name);
@@ -59,5 +65,5 @@ export async function importCsv(text, source = 'seed') {
       }
     }
   });
-  return { total: records.length, inserted, updated, skipped };
+  return { total: records.length, inserted, updated, skipped, deleted };
 }

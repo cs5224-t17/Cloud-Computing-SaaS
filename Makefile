@@ -48,7 +48,7 @@ seed: check ## Import seed/listings.csv through the admin endpoint (waits for th
 	$(eval URL := $(call out,app_url))
 	$(eval TOKEN := $(shell aws ssm get-parameter --name /cs5224-t17/admin_token --with-decryption --query Parameter.Value --output text))
 	@until curl -sf $(URL)/api/health >/dev/null; do echo "waiting for API..."; sleep 15; done
-	@curl -sf -X POST "$(URL)/api/admin/import" -H "x-admin-token: $(TOKEN)" -H "Content-Type: text/csv" --data-binary @seed/listings.csv; echo
+	@curl -sf -X POST "$(URL)/api/admin/import?replace=true" -H "x-admin-token: $(TOKEN)" -H "Content-Type: text/csv" --data-binary @seed/listings.csv; echo
 
 refresh: check ## Roll instances so they pull the newest image
 	aws autoscaling start-instance-refresh --auto-scaling-group-name $(call out,asg_name) --query InstanceRefreshId --output text

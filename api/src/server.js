@@ -28,7 +28,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/businesses', businessRoutes);
 
 app.post('/api/admin/import', requireAdmin, express.text({ type: ['text/csv', 'text/plain'], limit: '5mb' }),
-  async (req, res) => res.json(await importCsv(req.body, String(req.query.source ?? 'seed'))));
+  async (req, res) => res.json(await importCsv(req.body, String(req.query.source ?? 'seed'), req.query.replace === 'true')));
 
 // Local storage mode serves uploaded photos itself (on AWS these come from CloudFront/S3).
 if (config.storageDriver === 'local') {
