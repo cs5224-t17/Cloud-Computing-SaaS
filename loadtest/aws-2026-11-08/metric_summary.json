@@ -1,0 +1,104 @@
+{
+  "ec2_cpu": {
+    "ASG average": {
+      "points": 35,
+      "max": 9.6294
+    },
+    "ASG maximum": {
+      "points": 35,
+      "max": 33.4
+    },
+    "per instance i-0083b8f81860913f1": {
+      "points": 35,
+      "max": 9.6294
+    }
+  },
+  "ec2_cpu_credits": {
+    "usage i-0083b8f81860913f1 CPUCreditUsage": {
+      "points": 35,
+      "max": 0.9707
+    },
+    "balance i-0083b8f81860913f1 CPUCreditBalance": {
+      "points": 35,
+      "max": 288.0
+    }
+  },
+  "alb_requests": {
+    "RequestCount": {
+      "points": 174,
+      "max": 32907.0
+    }
+  },
+  "alb_response_time": {
+    "p50": {
+      "points": 44,
+      "max": 0.0428
+    },
+    "p95": {
+      "points": 44,
+      "max": 0.2883
+    },
+    "p99": {
+      "points": 44,
+      "max": 1.0039
+    },
+    "Average": {
+      "points": 44,
+      "max": 0.078
+    }
+  },
+  "alb_errors": {
+    "HTTPCode_Target_4XX_Count": {
+      "points": 10,
+      "max": 4.0
+    }
+  },
+  "alb_connections": {
+    "ActiveConnectionCount": {
+      "points": 55,
+      "max": 1171.0
+    },
+    "NewConnectionCount": {
+      "points": 44,
+      "max": 1076.0
+    }
+  },
+  "instance_count": {
+    "HealthyHostCount": {
+      "points": 174,
+      "max": 1.0
+    },
+    "UnHealthyHostCount": {
+      "points": 174,
+      "max": 0.0
+    }
+  },
+  "rds_cpu": {
+    "Average": {
+      "points": 174,
+      "max": 29.8648
+    },
+    "Maximum": {
+      "points": 174,
+      "max": 29.8648
+    }
+  },
+  "rds_connections": {
+    "Maximum": {
+      "points": 174,
+      "max": 10.0
+    }
+  },
+  "rds_memory": {
+    "Minimum": {
+      "points": 174,
+      "max": 224.7266
+    }
+  },
+  "rds_cpu_credits": {
+    "Average": {
+      "points": 35,
+      "max": 288.0
+    }
+  }
+}

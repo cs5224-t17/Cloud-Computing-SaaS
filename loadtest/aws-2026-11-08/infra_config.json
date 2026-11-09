@@ -1,0 +1,42 @@
+{
+  "asg": {
+    "min": 1,
+    "max": 3,
+    "desired_now": 1,
+    "health_check": "ELB",
+    "health_check_grace_s": 300,
+    "default_cooldown_s": 300,
+    "group_metrics_collection_enabled": false,
+    "scaling_policies": [
+      {
+        "name": "cs5224-t17-cpu-target",
+        "type": "TargetTrackingScaling",
+        "target": {
+          "PredefinedMetricSpecification": {
+            "PredefinedMetricType": "ASGAverageCPUUtilization"
+          },
+          "TargetValue": 50.0,
+          "DisableScaleIn": false
+        }
+      }
+    ]
+  },
+  "ec2": {
+    "instance_type": "t4g.micro",
+    "cpu_credits": "standard",
+    "ami_arch": "arm64 (Amazon Linux 2023)"
+  },
+  "rds": {
+    "class": "db.t4g.micro",
+    "engine": "postgres 16.13",
+    "storage_gb": 20,
+    "storage_type": "gp3",
+    "multi_az": false
+  },
+  "alb": {
+    "idle_timeout_note": "default 60 s",
+    "target_health_check": "/api/health",
+    "health_interval_s": 15
+  },
+  "alarm_state_changes_in_window": []
+}

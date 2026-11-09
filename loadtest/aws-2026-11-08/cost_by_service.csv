@@ -1,0 +1,16 @@
+period,service,usd
+2026-10-01..2026-11-01,"AWS Cost Explorer",0.02
+2026-10-01..2026-11-01,"EC2 - Other",0.26
+2026-10-01..2026-11-01,"Amazon Elastic Compute Cloud - Compute",14.63
+2026-10-01..2026-11-01,"Amazon Elastic Load Balancing",9.96
+2026-10-01..2026-11-01,"Amazon Relational Database Service",7.55
+2026-10-01..2026-11-01,"Amazon Virtual Private Cloud",3.23
+2026-10-01..2026-11-01,"Tax",3.21
+2026-11-01..2026-11-10,"AWS Cost Explorer",0.02
+2026-11-01..2026-11-10,"EC2 - Other",0.22
+2026-11-01..2026-11-10,"Amazon Elastic Compute Cloud - Compute",8.46
+2026-11-01..2026-11-10,"Amazon Elastic Load Balancing",4.33
+2026-11-01..2026-11-10,"Amazon Relational Database Service",4.96
+2026-11-01..2026-11-10,"Amazon Virtual Private Cloud",1.88
+2026-11-01..2026-11-10,"AmazonCloudWatch",0.01
+2026-11-01..2026-11-10,"Tax",1.79
