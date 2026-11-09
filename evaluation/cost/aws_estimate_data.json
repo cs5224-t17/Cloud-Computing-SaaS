@@ -1,0 +1,824 @@
+{
+  "prepared_utc": "2026-11-07T08:11:36.466453+00:00",
+  "region": "ap-southeast-1",
+  "currency": "USD",
+  "repository_commit": "3783f647f96b433d316bc6d21f9a4e450d4fd4b5",
+  "estimate_type": "Official AWS list-price reconstruction; not a saved AWS Pricing Calculator export or actual bill",
+  "rates": [
+    {
+      "key": "ec2",
+      "label": "EC2 Linux t4g.micro / hour",
+      "rate": 0.0106,
+      "unit": "Hrs",
+      "sku": "KVDBNHWN4332K9WE",
+      "description": "$0.0106 per On Demand Linux t4g.micro Instance Hour",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/ap-southeast-1/index.csv",
+      "publication_date": "2026-11-01",
+      "status": "Official AWS CSV rate"
+    },
+    {
+      "key": "ebs",
+      "label": "EC2 gp3 root storage / GB-month",
+      "rate": 0.096,
+      "unit": "GB-Mo",
+      "sku": "X8SY8CJFS8WV7VQN",
+      "description": "$0.096 per GB-month of General Purpose (gp3) provisioned storage - Asia Pacific (Singapore)",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/ap-southeast-1/index.csv",
+      "publication_date": "2026-11-01",
+      "status": "Official AWS CSV rate"
+    },
+    {
+      "key": "rds",
+      "label": "RDS PostgreSQL db.t4g.micro / hour",
+      "rate": 0.025,
+      "unit": "Hrs",
+      "sku": "BQ5T85JXP99J9D2J",
+      "description": "$ 0.025 per RDS db.t4g.micro Single-AZ instance hour (or partial hour) running PostgreSQL",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonRDS/current/ap-southeast-1/index.json",
+      "publication_date": "2026-10-29T07:06:35Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "rds_storage",
+      "label": "RDS gp3 storage / GB-month",
+      "rate": 0.138,
+      "unit": "GB-Mo",
+      "sku": "FXXDJWB23UZKQHCN",
+      "description": "$0.138 per GB-month of provisioned GP3 storage running PostgreSQL",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonRDS/current/ap-southeast-1/index.json",
+      "publication_date": "2026-10-29T07:06:35Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "alb",
+      "label": "Application Load Balancer / hour",
+      "rate": 0.0252,
+      "unit": "Hrs",
+      "sku": "UXD3JNG6UAM79CW6",
+      "description": "$0.0252 per Application LoadBalancer-hour (or partial hour)",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSELB/current/ap-southeast-1/index.json",
+      "publication_date": "2026-11-05T22:02:41Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "lcu",
+      "label": "ALB used LCU / hour",
+      "rate": 0.008,
+      "unit": "LCU-Hrs",
+      "sku": "45KY3J5YX2QM6KS7",
+      "description": "$0.008 per used Application load balancer capacity unit-hour (or partial hour)",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSELB/current/ap-southeast-1/index.json",
+      "publication_date": "2026-11-05T22:02:41Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "ipv4",
+      "label": "Public IPv4 / address-hour",
+      "rate": 0.005,
+      "unit": "Hrs",
+      "sku": "C8D8VMQRDHMB9KRU",
+      "description": "$0.005 per In-use public IPv4 address per hour",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonVPC/current/ap-southeast-1/index.json",
+      "publication_date": "2026-11-05T18:19:45Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "s3_storage",
+      "label": "S3 Standard / GB-month",
+      "rate": 0.025,
+      "unit": "GB-Mo",
+      "sku": "M6MTARCQFUQBQ2V3",
+      "description": "$0.025 per GB - first 50 TB / month of storage used",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/ap-southeast-1/index.json",
+      "publication_date": "2026-11-04T17:44:45Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "s3_put",
+      "label": "S3 PUT / request",
+      "rate": 5e-06,
+      "unit": "Requests",
+      "sku": "VHRJWKRHEA6VHEFY",
+      "description": "$0.005 per 1,000 PUT, COPY, POST, or LIST requests",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/ap-southeast-1/index.json",
+      "publication_date": "2026-11-04T17:44:45Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "s3_get",
+      "label": "S3 GET / request",
+      "rate": 4e-07,
+      "unit": "Requests",
+      "sku": "T469UNPYX78434EG",
+      "description": "$0.004 per 10,000 GET and all other requests",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/ap-southeast-1/index.json",
+      "publication_date": "2026-11-04T17:44:45Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "cf_data",
+      "label": "CloudFront Asia viewer egress / GB",
+      "rate": 0.12,
+      "unit": "GB",
+      "sku": "A86N9S7CGUKZHH8P",
+      "description": "$0.120 per GB - first 10 TB / month data transfer out",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonCloudFront/current/index.json",
+      "publication_date": "2026-10-19T15:05:00Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "cf_requests",
+      "label": "CloudFront Asia HTTPS / request",
+      "rate": 1.2e-06,
+      "unit": "Requests",
+      "sku": "W6KHTEW6VCKTZFTR",
+      "description": "$0.012 per 10,000 HTTPS Requests",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonCloudFront/current/index.json",
+      "publication_date": "2026-10-19T15:05:00Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "cf_functions",
+      "label": "CloudFront Functions / invocation",
+      "rate": 1e-07,
+      "unit": "FunctionExecutions",
+      "sku": "QAZUUEJG8GARJCET",
+      "description": "$0.10 per 1,000,000 CloudFront Function Executions",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonCloudFront/current/index.json",
+      "publication_date": "2026-10-19T15:05:00Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "sqs",
+      "label": "SQS Standard / request",
+      "rate": 4e-07,
+      "unit": "Requests",
+      "sku": "PVF7MDBNRK7V9S5H",
+      "description": "$0.40 per million Amazon SQS standard requests in Tier1 in Asia Pacific (Singapore)",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSQueueService/current/ap-southeast-1/index.json",
+      "publication_date": "2026-09-11T12:46:07Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "ses",
+      "label": "SES outbound / recipient",
+      "rate": 0.0001,
+      "unit": "Count",
+      "sku": "RJ9VJWVK6B58V9UU",
+      "description": "USD0.0001 per Count for Recipients:Send in Asia Pacific (Singapore)",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonSES/current/ap-southeast-1/index.json",
+      "publication_date": "2026-11-04T17:41:09Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "ecr",
+      "label": "Private ECR storage / GB-month",
+      "rate": 0.1,
+      "unit": "GB-Mo",
+      "sku": "7V2YHG7PQ82BEXNB",
+      "description": "$0.10 per GB-month of data storage",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonECR/current/ap-southeast-1/index.json",
+      "publication_date": "2026-09-11T12:44:25Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "cw_ingest",
+      "label": "CloudWatch Standard log ingestion / GB",
+      "rate": 0.7,
+      "unit": "GB",
+      "sku": "ZEKCE7VGMSM5XZPW",
+      "description": "$0.70 per GB custom log data ingested in Standard log class - Asia Pacific (Singapore)",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonCloudWatch/current/ap-southeast-1/index.json",
+      "publication_date": "2026-11-04T21:35:32Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "cw_store",
+      "label": "CloudWatch log storage / GB-month",
+      "rate": 0.03,
+      "unit": "GB-Mo",
+      "sku": "RKCBFFXUWXG8KUQY",
+      "description": "$0.03 per GB-mo of log storage - Asia Pacific (Singapore)",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonCloudWatch/current/ap-southeast-1/index.json",
+      "publication_date": "2026-11-04T21:35:32Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "cw_api",
+      "label": "CloudWatch GetMetricData / metric",
+      "rate": 1e-05,
+      "unit": "Metrics",
+      "sku": "9J7G2HNBW96AU3AP",
+      "description": "$0.01 per 1,000 metrics requested using GetMetricData API - Asia Pacific (Singapore)",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonCloudWatch/current/ap-southeast-1/index.json",
+      "publication_date": "2026-11-04T21:35:32Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "cw_alarm",
+      "label": "CloudWatch standard alarm / month",
+      "rate": 0.1,
+      "unit": "Alarms",
+      "sku": "ERS2PGV5BX4XH4WQ",
+      "description": "$0.10 per alarm metric month (standard resolution) - Asia Pacific (Singapore)",
+      "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonCloudWatch/current/ap-southeast-1/index.json",
+      "publication_date": "2026-11-04T21:35:32Z",
+      "status": "Official AWS catalog rate"
+    },
+    {
+      "key": "cw_dashboard",
+      "label": "CloudWatch dashboard / month",
+      "rate": 3,
+      "unit": "dashboard-month",
+      "sku": "",
+      "source": "https://docs.aws.amazon.com/solutions/latest/automated-security-response-on-aws/cost.html",
+      "publication_date": "Retrieved 2026-11-07",
+      "description": "Published AWS solution pricing example: one dashboard USD 3/month, before account allowances",
+      "status": "Published AWS pricing example"
+    },
+    {
+      "key": "cross_az",
+      "label": "EC2/RDS cross-AZ / combined payload GB",
+      "rate": 0.02,
+      "unit": "GB",
+      "sku": "",
+      "source": "https://aws.amazon.com/blogs/architecture/exploring-data-transfer-costs-for-aws-managed-databases/",
+      "publication_date": "2021-11-02; current RDS pricing also checked",
+      "description": "Budget for both endpoints at USD 0.01/GB each; confirm actual placement and billable directions",
+      "status": "Documented rate; modeled combined endpoints"
+    }
+  ],
+  "usage": [
+    {
+      "key": "hours",
+      "label": "Operating hours / month",
+      "values": [
+        730,
+        730,
+        730,
+        730
+      ],
+      "note": "Planning convention; replace for actual billing month"
+    },
+    {
+      "key": "instances",
+      "label": "Average EC2 instances",
+      "values": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "note": "Minimum-footprint price projection, not proof that one instance supports each scale"
+    },
+    {
+      "key": "root_gb",
+      "label": "gp3 root GB / EC2 instance",
+      "values": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "note": "AMI/root volume not pinned by Terraform; 8 GB gp3 is an explicit assumption"
+    },
+    {
+      "key": "rds_count",
+      "label": "RDS instances",
+      "values": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "note": "Single-AZ PostgreSQL instance in source"
+    },
+    {
+      "key": "rds_gb",
+      "label": "RDS gp3 GB",
+      "values": [
+        20,
+        20,
+        20,
+        20
+      ],
+      "note": "Allocated storage configured in infra/data.tf"
+    },
+    {
+      "key": "listings",
+      "label": "Listings",
+      "values": [
+        28,
+        100,
+        1000,
+        10000
+      ],
+      "note": "28 imported locally; larger counts are scenarios"
+    },
+    {
+      "key": "mau",
+      "label": "Monthly active users",
+      "values": [
+        100,
+        500,
+        2000,
+        10000
+      ],
+      "note": "Planning assumptions, not measured participants or concurrent VUs"
+    },
+    {
+      "key": "cf_gb",
+      "label": "CloudFront viewer egress GB",
+      "values": [
+        10,
+        50,
+        200,
+        1000
+      ],
+      "note": "All viewers assumed in CloudFront Asia pricing area"
+    },
+    {
+      "key": "cf_req",
+      "label": "CloudFront HTTPS requests",
+      "values": [
+        100000,
+        500000,
+        2000000,
+        10000000
+      ],
+      "note": "Monthly traffic assumptions, independent of load-test peak concurrency"
+    },
+    {
+      "key": "api_req",
+      "label": "API requests through ALB",
+      "values": [
+        30000,
+        150000,
+        600000,
+        3000000
+      ],
+      "note": "Assume 30% of CloudFront requests reach the API"
+    },
+    {
+      "key": "api_payload_gb",
+      "label": "ALB processed GB / API request",
+      "values": [
+        1.2e-05,
+        1.2e-05,
+        1.2e-05,
+        1.2e-05
+      ],
+      "note": "Approx. 12 KB per request including response; no large photo uploads modeled"
+    },
+    {
+      "key": "connection_seconds",
+      "label": "Average ALB connection seconds",
+      "values": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "note": "Assume one new connection per API request, 5-second connection lifetime"
+    },
+    {
+      "key": "s3_gb",
+      "label": "S3 Standard stored GB",
+      "values": [
+        0.29,
+        1.01,
+        10.01,
+        100.01
+      ],
+      "note": "Approx. 10 MB/listing plus 0.01 GB SPA; photos are a projection, not observed uploads"
+    },
+    {
+      "key": "s3_put",
+      "label": "S3 PUT requests",
+      "values": [
+        1000,
+        2000,
+        10000,
+        100000
+      ],
+      "note": "Uploads/deployments/updates assumption"
+    },
+    {
+      "key": "s3_get",
+      "label": "S3 GET origin requests",
+      "values": [
+        10000,
+        50000,
+        200000,
+        1000000
+      ],
+      "note": "Origin misses/static requests assumption; not every CloudFront request reaches S3"
+    },
+    {
+      "key": "cf_functions",
+      "label": "CloudFront Function invocations",
+      "values": [
+        10000,
+        50000,
+        200000,
+        1000000
+      ],
+      "note": "SPA viewer-request function on web behavior; no charge attributed to Lambda@Edge"
+    },
+    {
+      "key": "events",
+      "label": "Listing update events",
+      "values": [
+        100,
+        500,
+        2000,
+        10000
+      ],
+      "note": "Notification workload assumption; no stock inventory model exists"
+    },
+    {
+      "key": "emails",
+      "label": "SES outbound recipients",
+      "values": [
+        1000,
+        5000,
+        20000,
+        100000
+      ],
+      "note": "Planning volume; public delivery needs SES production access or verified sandbox recipients"
+    },
+    {
+      "key": "ecr_gb",
+      "label": "Private ECR average stored GB",
+      "values": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "note": "Assumed total across retained images/layers; repository retains last 10 images"
+    },
+    {
+      "key": "logs_gb",
+      "label": "CloudWatch log ingestion GB",
+      "values": [
+        1,
+        2,
+        10,
+        50
+      ],
+      "note": "Planning assumptions; API and worker both log"
+    },
+    {
+      "key": "retention_days",
+      "label": "Log retention days",
+      "values": [
+        14,
+        14,
+        14,
+        14
+      ],
+      "note": "Configured in infra/observability.tf"
+    },
+    {
+      "key": "dashboards",
+      "label": "CloudWatch dashboards",
+      "values": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "note": "One source dashboard; list-price budget before dashboard allowances"
+    },
+    {
+      "key": "metric_requests",
+      "label": "GetMetricData metrics / month",
+      "values": [
+        10000,
+        10000,
+        10000,
+        10000
+      ],
+      "note": "Assumed operator dashboard usage"
+    },
+    {
+      "key": "alarms",
+      "label": "Target-tracking standard alarms",
+      "values": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "note": "Budget for high/low alarms managed by target tracking; verify applied policies"
+    },
+    {
+      "key": "cross_az_gb",
+      "label": "Cross-AZ EC2/RDS payload GB",
+      "values": [
+        1,
+        5,
+        20,
+        100
+      ],
+      "note": "Assumption because app can run in either AZ and RDS is single-AZ"
+    },
+    {
+      "key": "allowance",
+      "label": "Other small-usage allowance USD",
+      "values": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "note": "Budget contingency for SES payload, KMS and incidental usage; not an AWS tariff"
+    },
+    {
+      "key": "fx",
+      "label": "Planning SGD per USD",
+      "values": [
+        1.3,
+        1.3,
+        1.3,
+        1.3
+      ],
+      "note": "Illustrative planning conversion only, not a verified market exchange rate"
+    },
+    {
+      "key": "horizon",
+      "label": "TCO months",
+      "values": [
+        36,
+        36,
+        36,
+        36
+      ],
+      "note": "Constant-run-rate model; no price/demand change forecast"
+    }
+  ],
+  "scenarios": [
+    {
+      "listings": 28,
+      "inputs": {
+        "hours": 730,
+        "instances": 1,
+        "root_gb": 8,
+        "rds_count": 1,
+        "rds_gb": 20,
+        "listings": 28,
+        "mau": 100,
+        "cf_gb": 10,
+        "cf_req": 100000,
+        "api_req": 30000,
+        "api_payload_gb": 1.2e-05,
+        "connection_seconds": 5,
+        "s3_gb": 0.29,
+        "s3_put": 1000,
+        "s3_get": 10000,
+        "cf_functions": 10000,
+        "events": 100,
+        "emails": 1000,
+        "ecr_gb": 1,
+        "logs_gb": 1,
+        "retention_days": 14,
+        "dashboards": 1,
+        "metric_requests": 10000,
+        "alarms": 2,
+        "cross_az_gb": 1,
+        "allowance": 1,
+        "fx": 1.3,
+        "horizon": 36
+      },
+      "components_usd": {
+        "EC2 compute": 7.738,
+        "EC2 gp3 root disks": 0.768,
+        "RDS compute": 18.25,
+        "RDS gp3 storage": 2.7600000000000002,
+        "ALB hours": 18.396,
+        "ALB used LCUs": 0.0028799999999999997,
+        "Public IPv4": 10.950000000000001,
+        "S3 storage": 0.0072499999999999995,
+        "S3 PUT": 0.005,
+        "S3 GET": 0.004,
+        "CloudFront transfer": 1.2,
+        "CloudFront HTTPS": 0.12,
+        "CloudFront Functions": 0.001,
+        "SQS": 0.05268,
+        "SES recipients": 0.1,
+        "ECR storage": 0.1,
+        "CloudWatch log ingestion": 0.7,
+        "CloudWatch log storage": 0.014,
+        "CloudWatch dashboard": 3,
+        "CloudWatch GetMetricData": 0.1,
+        "CloudWatch alarms": 0.2,
+        "Cross-AZ transfer budget": 0.02,
+        "SSM standard / ASG / IAM / budget monitoring": 0,
+        "Other usage allowance": 1
+      },
+      "total_usd": 65.48881,
+      "planning_sgd": 85.135453
+    },
+    {
+      "listings": 100,
+      "inputs": {
+        "hours": 730,
+        "instances": 1,
+        "root_gb": 8,
+        "rds_count": 1,
+        "rds_gb": 20,
+        "listings": 100,
+        "mau": 500,
+        "cf_gb": 50,
+        "cf_req": 500000,
+        "api_req": 150000,
+        "api_payload_gb": 1.2e-05,
+        "connection_seconds": 5,
+        "s3_gb": 1.01,
+        "s3_put": 2000,
+        "s3_get": 50000,
+        "cf_functions": 50000,
+        "events": 500,
+        "emails": 5000,
+        "ecr_gb": 1,
+        "logs_gb": 2,
+        "retention_days": 14,
+        "dashboards": 1,
+        "metric_requests": 10000,
+        "alarms": 2,
+        "cross_az_gb": 5,
+        "allowance": 1,
+        "fx": 1.3,
+        "horizon": 36
+      },
+      "components_usd": {
+        "EC2 compute": 7.738,
+        "EC2 gp3 root disks": 0.768,
+        "RDS compute": 18.25,
+        "RDS gp3 storage": 2.7600000000000002,
+        "ALB hours": 18.396,
+        "ALB used LCUs": 0.014400000000000001,
+        "Public IPv4": 10.950000000000001,
+        "S3 storage": 0.02525,
+        "S3 PUT": 0.01,
+        "S3 GET": 0.02,
+        "CloudFront transfer": 6.0,
+        "CloudFront HTTPS": 0.6,
+        "CloudFront Functions": 0.005,
+        "SQS": 0.05316,
+        "SES recipients": 0.5,
+        "ECR storage": 0.1,
+        "CloudWatch log ingestion": 1.4,
+        "CloudWatch log storage": 0.028,
+        "CloudWatch dashboard": 3,
+        "CloudWatch GetMetricData": 0.1,
+        "CloudWatch alarms": 0.2,
+        "Cross-AZ transfer budget": 0.1,
+        "SSM standard / ASG / IAM / budget monitoring": 0,
+        "Other usage allowance": 1
+      },
+      "total_usd": 72.01781,
+      "planning_sgd": 93.623153
+    },
+    {
+      "listings": 1000,
+      "inputs": {
+        "hours": 730,
+        "instances": 1,
+        "root_gb": 8,
+        "rds_count": 1,
+        "rds_gb": 20,
+        "listings": 1000,
+        "mau": 2000,
+        "cf_gb": 200,
+        "cf_req": 2000000,
+        "api_req": 600000,
+        "api_payload_gb": 1.2e-05,
+        "connection_seconds": 5,
+        "s3_gb": 10.01,
+        "s3_put": 10000,
+        "s3_get": 200000,
+        "cf_functions": 200000,
+        "events": 2000,
+        "emails": 20000,
+        "ecr_gb": 1,
+        "logs_gb": 10,
+        "retention_days": 14,
+        "dashboards": 1,
+        "metric_requests": 10000,
+        "alarms": 2,
+        "cross_az_gb": 20,
+        "allowance": 1,
+        "fx": 1.3,
+        "horizon": 36
+      },
+      "components_usd": {
+        "EC2 compute": 7.738,
+        "EC2 gp3 root disks": 0.768,
+        "RDS compute": 18.25,
+        "RDS gp3 storage": 2.7600000000000002,
+        "ALB hours": 18.396,
+        "ALB used LCUs": 0.057600000000000005,
+        "Public IPv4": 10.950000000000001,
+        "S3 storage": 0.25025000000000003,
+        "S3 PUT": 0.05,
+        "S3 GET": 0.08,
+        "CloudFront transfer": 24.0,
+        "CloudFront HTTPS": 2.4,
+        "CloudFront Functions": 0.02,
+        "SQS": 0.054959999999999995,
+        "SES recipients": 2.0,
+        "ECR storage": 0.1,
+        "CloudWatch log ingestion": 7.0,
+        "CloudWatch log storage": 0.14,
+        "CloudWatch dashboard": 3,
+        "CloudWatch GetMetricData": 0.1,
+        "CloudWatch alarms": 0.2,
+        "Cross-AZ transfer budget": 0.4,
+        "SSM standard / ASG / IAM / budget monitoring": 0,
+        "Other usage allowance": 1
+      },
+      "total_usd": 99.71481,
+      "planning_sgd": 129.629253
+    },
+    {
+      "listings": 10000,
+      "inputs": {
+        "hours": 730,
+        "instances": 1,
+        "root_gb": 8,
+        "rds_count": 1,
+        "rds_gb": 20,
+        "listings": 10000,
+        "mau": 10000,
+        "cf_gb": 1000,
+        "cf_req": 10000000,
+        "api_req": 3000000,
+        "api_payload_gb": 1.2e-05,
+        "connection_seconds": 5,
+        "s3_gb": 100.01,
+        "s3_put": 100000,
+        "s3_get": 1000000,
+        "cf_functions": 1000000,
+        "events": 10000,
+        "emails": 100000,
+        "ecr_gb": 1,
+        "logs_gb": 50,
+        "retention_days": 14,
+        "dashboards": 1,
+        "metric_requests": 10000,
+        "alarms": 2,
+        "cross_az_gb": 100,
+        "allowance": 1,
+        "fx": 1.3,
+        "horizon": 36
+      },
+      "components_usd": {
+        "EC2 compute": 7.738,
+        "EC2 gp3 root disks": 0.768,
+        "RDS compute": 18.25,
+        "RDS gp3 storage": 2.7600000000000002,
+        "ALB hours": 18.396,
+        "ALB used LCUs": 0.28800000000000003,
+        "Public IPv4": 10.950000000000001,
+        "S3 storage": 2.5002500000000003,
+        "S3 PUT": 0.5,
+        "S3 GET": 0.39999999999999997,
+        "CloudFront transfer": 120.0,
+        "CloudFront HTTPS": 12.0,
+        "CloudFront Functions": 0.09999999999999999,
+        "SQS": 0.06455999999999999,
+        "SES recipients": 10.0,
+        "ECR storage": 0.1,
+        "CloudWatch log ingestion": 35.0,
+        "CloudWatch log storage": 0.7,
+        "CloudWatch dashboard": 3,
+        "CloudWatch GetMetricData": 0.1,
+        "CloudWatch alarms": 0.2,
+        "Cross-AZ transfer budget": 2.0,
+        "SSM standard / ASG / IAM / budget monitoring": 0,
+        "Other usage allowance": 1
+      },
+      "total_usd": 246.81481,
+      "planning_sgd": 320.859253
+    }
+  ],
+  "asg_sensitivity": [
+    {
+      "case": "One instance all month",
+      "average_instances": 1,
+      "monthly_usd": 65.48881
+    },
+    {
+      "case": "Three instances for 2h/day; otherwise one",
+      "average_instances": 1.1643835616438356,
+      "monthly_usd": 67.49569657534246
+    },
+    {
+      "case": "Three instances all month",
+      "average_instances": 3,
+      "monthly_usd": 89.90593
+    }
+  ]
+}

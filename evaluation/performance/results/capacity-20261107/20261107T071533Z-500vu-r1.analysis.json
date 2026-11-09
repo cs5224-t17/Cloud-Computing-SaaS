@@ -1,0 +1,31 @@
+{
+  "requests": 38632,
+  "rps": 643.8666666666667,
+  "p50_ms": 73.858788,
+  "p95_ms": 370.77682679999987,
+  "p99_ms": 618.516454420001,
+  "error_rate": 0.025962932284116794,
+  "check_pass_rate": 0.9791788741747725,
+  "window_seconds": 60,
+  "observed_measure_span_seconds": 60,
+  "request_mix": {
+    "search": 13033,
+    "facets": 13033,
+    "detail": 12566
+  },
+  "statuses": {
+    "200": 37629,
+    "502": 1003
+  },
+  "vus": 500,
+  "repeat": 1,
+  "exit_code": 99,
+  "run_id": "20261107T071533Z-500vu-r1",
+  "label": "boundary-confirmation",
+  "generator_cpu_peak_pct": 59.14,
+  "api_cpu_peak_pct": 114.0,
+  "db_cpu_peak_pct": 110.51,
+  "minimum_host_available_gib": 2.3991928100585938,
+  "stop_reason": null,
+  "slo_pass": false
+}

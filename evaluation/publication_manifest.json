@@ -1,0 +1,451 @@
+{
+  "prepared": "2026-11-09",
+  "scope": "Report support; full raw measurements retained locally",
+  "files": [
+    {
+      "file": "evaluation/AI_ASSISTANCE.md",
+      "bytes": 781,
+      "sha256": "81b4e0f292a6e70ef086e9e61aa546222575e66e0ebdeb96e22a44795a31bc72"
+    },
+    {
+      "file": "evaluation/architecture_consistency.md",
+      "bytes": 7008,
+      "sha256": "4e4ded354350a5eef975d9aceb21ca3b2718e0f1ab6b2f18cae96c8f1f156e94"
+    },
+    {
+      "file": "evaluation/cost/aws_cost_estimate.xlsx",
+      "bytes": 13621,
+      "sha256": "eccd802bcae62ecfa8c1a5923861740bbbac232bd697c29ae27f7831f0b2efe3"
+    },
+    {
+      "file": "evaluation/cost/aws_estimate.md",
+      "bytes": 9583,
+      "sha256": "8a8f085907d790f39282903a5fb5208f25db21513cb9bf32011f343355d15771"
+    },
+    {
+      "file": "evaluation/cost/aws_estimate_data.json",
+      "bytes": 24628,
+      "sha256": "6558ad2fc3df0b87cd55a9b7009794459500323bf90e2890cb250dbce7fbed3b"
+    },
+    {
+      "file": "evaluation/cost/aws_export_analysis.json",
+      "bytes": 7553,
+      "sha256": "0bcef7ad986145524150de3b8b370610b78d5fa062876e65f1695e3482aab0e2"
+    },
+    {
+      "file": "evaluation/cost/onprem_cost_comparison.xlsx",
+      "bytes": 13496,
+      "sha256": "2517850be3473f4e3ad73ea93bf640f08d157c2c16f85f04d0ff5a86166748aa"
+    },
+    {
+      "file": "evaluation/cost/onprem_estimate.md",
+      "bytes": 10288,
+      "sha256": "85cf6da380eac1d43e9f85fc0a2a7a7f0a9c3b621cf82ea49f074e0dc8e4f73b"
+    },
+    {
+      "file": "evaluation/cost/onprem_estimate_data.json",
+      "bytes": 7871,
+      "sha256": "10f6abc79be8e5813cfff357268e3651951ff48262b15e118b298c3a5369fee2"
+    },
+    {
+      "file": "evaluation/figures/01_capacity_comparison.png",
+      "bytes": 249330,
+      "sha256": "dfa934d3523af209ba0fc9703a0433ae3e8284e8ff4841b3c53dc4c75b78632a"
+    },
+    {
+      "file": "evaluation/figures/01_capacity_comparison.svg",
+      "bytes": 32157,
+      "sha256": "b4138de7cf546d3d13d21a65770c00093bbf298d2466f7fbb017be1c05554c16"
+    },
+    {
+      "file": "evaluation/figures/02_quality_targets.png",
+      "bytes": 133046,
+      "sha256": "cb5ed0d4a465c5ee560e87ba017432cec02728477c10d33564204da2ec778505"
+    },
+    {
+      "file": "evaluation/figures/02_quality_targets.svg",
+      "bytes": 15349,
+      "sha256": "ababffbd46a918661808f13684de32cf814bdfc3cc93012caa7b69f5db592f9e"
+    },
+    {
+      "file": "evaluation/figures/03_aws_monitoring_timeline.png",
+      "bytes": 255533,
+      "sha256": "a233a334dab234292e9a9b9f16cc2a1db1707e279e09ffab4d3915cae80a3459"
+    },
+    {
+      "file": "evaluation/figures/03_aws_monitoring_timeline.svg",
+      "bytes": 46971,
+      "sha256": "5ede4a16cbb4c9af8f8516c7309cd06230331d309c9d6757367efc6f1ca4caa4"
+    },
+    {
+      "file": "evaluation/figures/04_monthly_cost_composition.png",
+      "bytes": 176733,
+      "sha256": "cfb91732f32d1de5832310752fac1fe5a0aa6f03c1e4b1223f3aff7c6de2acda"
+    },
+    {
+      "file": "evaluation/figures/04_monthly_cost_composition.svg",
+      "bytes": 17230,
+      "sha256": "18c0929defd58c6abf548d8012d92575e80bfbfca206d5157dc6cb2d7adfca8b"
+    },
+    {
+      "file": "evaluation/figures/05_cash_cost_over_time.png",
+      "bytes": 216274,
+      "sha256": "fd75861b0ed738f4f0129e26937448a88fc07baa6f499eb4feb6d3ae15269551"
+    },
+    {
+      "file": "evaluation/figures/05_cash_cost_over_time.svg",
+      "bytes": 16176,
+      "sha256": "1d16461716d94d219b84acdfa3a4b759fcfca1e193690958c53a23e5adeff80d"
+    },
+    {
+      "file": "evaluation/figures/06_paying_sellers.png",
+      "bytes": 165308,
+      "sha256": "5926f585a50ea9c6472b26abdc2a7452d3b32d7f20da6881d8d469d87515a64e"
+    },
+    {
+      "file": "evaluation/figures/06_paying_sellers.svg",
+      "bytes": 16667,
+      "sha256": "30b17a14b9cff7c5e78d3dad560d46f15419ea221f1be33dcee0ad2690b8e144"
+    },
+    {
+      "file": "evaluation/figures/07_lighthouse_results.png",
+      "bytes": 178254,
+      "sha256": "8cd23ad89ec3dfe1fd3d992e4e8262e38012a04b354fe84cf28966f04912690f"
+    },
+    {
+      "file": "evaluation/figures/07_lighthouse_results.svg",
+      "bytes": 21367,
+      "sha256": "1d8da1e8c7ffa1aabade827e688f007feec0d825d97cdbd4c8c3ba8f098e8eac"
+    },
+    {
+      "file": "evaluation/figures/08_endpoint_tail_latency.png",
+      "bytes": 147584,
+      "sha256": "ea0b9782cfa9137cb68f852547d9d8ac81f082b20d4bcb416ee2b74f58d7a7d1"
+    },
+    {
+      "file": "evaluation/figures/08_endpoint_tail_latency.svg",
+      "bytes": 13612,
+      "sha256": "b64a7be29c4f2c4d3e045a635d14fb8212c1c0b099312404742c1b608b389141"
+    },
+    {
+      "file": "evaluation/figures/09_aws_budget_drivers.png",
+      "bytes": 183628,
+      "sha256": "edd0255d98bcf915057ba6f3f73c6270c94d89363dac88e99096d3b0c705320a"
+    },
+    {
+      "file": "evaluation/figures/09_aws_budget_drivers.svg",
+      "bytes": 10793,
+      "sha256": "a4fcfb2ef36fa9a35643261a2f7fae904dc90eeadc3ab82e756f347c4940f61c"
+    },
+    {
+      "file": "evaluation/figures/all_figures_preview.png",
+      "bytes": 949609,
+      "sha256": "9e3699d18e90cffc738e9bfe628d812b2903038dbee217e7932bb571a86997ce"
+    },
+    {
+      "file": "evaluation/figures/figure_manifest.json",
+      "bytes": 7455,
+      "sha256": "ccddc96bcc6902c359f43c8324a13837166a4f3682f4b1ffd3aba5d5b1fdab79"
+    },
+    {
+      "file": "evaluation/figures/README.md",
+      "bytes": 7177,
+      "sha256": "e5496bd7849f940c8b6da6d7e9330f52a267690f4f1e9b4719f5af401fb24d08"
+    },
+    {
+      "file": "evaluation/performance/lighthouse_report.md",
+      "bytes": 2190,
+      "sha256": "2823640945c86c9630d28edf23893881a383670baaa1820683a977f3c341e6f3"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T065527Z-1vu-r1.analysis.json",
+      "bytes": 633,
+      "sha256": "a1452c8bcd4865920ef9c76f6c69ec830807b045113ead426f0eb07a21d19005"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T065527Z-1vu-r1.summary.json",
+      "bytes": 5642,
+      "sha256": "80c1c65ce9f36e7b47f884571b2bd0a8474985f5bc3084cec8ce49e8117d72eb"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T065644Z-10vu-r1.analysis.json",
+      "bytes": 632,
+      "sha256": "45f3e06b730b9b9aa3e4badd45d98b8447eac42905f5c8c24957f6c60cdf8b71"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T065644Z-10vu-r1.summary.json",
+      "bytes": 5665,
+      "sha256": "98eb596a6a23aee6e9c2d1927b9a479c5c3fd975724bba521bd427bb47cf46d3"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T065809Z-25vu-r1.analysis.json",
+      "bytes": 644,
+      "sha256": "de54bb83fff298b2d486b6fa2ab71305b55b0ea6888079d6cf2cecdd8bc5438b"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T065809Z-25vu-r1.summary.json",
+      "bytes": 5650,
+      "sha256": "12ac1d27b789222022d991ebe58b9906956467d7d2f22b16be480cbf68e2651a"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T065933Z-50vu-r1.analysis.json",
+      "bytes": 645,
+      "sha256": "83122f7c21711790aaeabc1ad4f1c539e469f0190c029860ce9309b73dc628f0"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T065933Z-50vu-r1.summary.json",
+      "bytes": 5616,
+      "sha256": "983f1a50b44802b31796d66d25a38e764ab55fd7a76126ab55ff253402b1f79f"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T070057Z-100vu-r1.analysis.json",
+      "bytes": 653,
+      "sha256": "dee53bfd4e084f10a984048f89415b2e2562b268902f8267be307f933a16921c"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T070057Z-100vu-r1.summary.json",
+      "bytes": 5676,
+      "sha256": "55667d0ea29210463796d6e4440f35bd1430e785b0f362aab52c35905d62cb4b"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T070235Z-200vu-r1.analysis.json",
+      "bytes": 647,
+      "sha256": "de9ecea0860fa459f500f566486d835c98cd73d058e16d2bb98619dc265a30f4"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T070235Z-200vu-r1.summary.json",
+      "bytes": 5716,
+      "sha256": "fde300d2031db44ed798f361a3f57d15e4edc70761871e1d65f5f1e945d1d559"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T070400Z-400vu-r1.analysis.json",
+      "bytes": 658,
+      "sha256": "aabcc0dcc7f55118702a87f25d341cb09ac9a892d7f9294f3e9fd811ca576dc3"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T070400Z-400vu-r1.summary.json",
+      "bytes": 5700,
+      "sha256": "88d8221f46a3ea872b6a25ac3a91a189b68540776937acc7a1c8ebc270a483be"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T070526Z-800vu-r1.analysis.json",
+      "bytes": 722,
+      "sha256": "8355ca4f6e5995bd7e985dd0295596fab47819e4a4fc34d454143552eec64ddb"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T070526Z-800vu-r1.summary.json",
+      "bytes": 5659,
+      "sha256": "b8d8715e567432ba28178b220481255ec884c8a75741108b0a0bd905e5da106d"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T070725Z-600vu-r1.analysis.json",
+      "bytes": 716,
+      "sha256": "bc69ad5849dbdab9ff41a71be84220c0d81acda4ec8a2985f5884c7f83612a57"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T070725Z-600vu-r1.summary.json",
+      "bytes": 5719,
+      "sha256": "7acd465b6649806089d63eafb76b94d6748d31e29d19f827e6a63b010fb3f04e"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T071058Z-400vu-r1.analysis.json",
+      "bytes": 663,
+      "sha256": "276d817db876ed2d92a7aec22b44e39a762c8cb9676451b5ecf6aaba8a5164a9"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T071058Z-400vu-r1.summary.json",
+      "bytes": 5651,
+      "sha256": "27b39592f13c2eda8c358b2064f8b1cd976649adf935f147d8884a2db7fce725"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T071315Z-500vu-r1.analysis.json",
+      "bytes": 719,
+      "sha256": "7da4452c13adae8df5426bad8cfdfc146c338d3b31ac0a0a7388315b0a58a02c"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T071315Z-500vu-r1.summary.json",
+      "bytes": 5750,
+      "sha256": "9099c75d62bd513b33af06d944458ab81707705f131e31068f28f77dbd764542"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T071533Z-500vu-r1.analysis.json",
+      "bytes": 734,
+      "sha256": "81f3902898a83695ee748cbd3c03401680f30062d1e96b559d33f680d763b7d0"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/20261107T071533Z-500vu-r1.summary.json",
+      "bytes": 5789,
+      "sha256": "e161f4aac46382dd40dfe19cd93f400fcc518cbe34f71602d2c0714a913adb2d"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/capacity_curve.csv",
+      "bytes": 1078,
+      "sha256": "4ca32a586ef048ef5cda5f790fbb73507bac21897606b451ba82864cadca0932"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/capacity_curve.png",
+      "bytes": 124285,
+      "sha256": "28b07c5c7a05950fc65db7f65bfb883604366bff7827a68ee1038192ae903cfd"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/capacity_curve.svg",
+      "bytes": 73160,
+      "sha256": "eb39dda54795902a78d7557309e16bbc891fdd5e8a61ce203526310a62c11e2e"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/capacity_report.md",
+      "bytes": 3814,
+      "sha256": "2464dc2f4577fa0d1c4d3120fb0ae1e8b69cb02018b4d3f5062bb323f051aae2"
+    },
+    {
+      "file": "evaluation/performance/results/capacity-20261107/findings.md",
+      "bytes": 8993,
+      "sha256": "a98a665c98c974c3e12ba054bdadeebfe60a1644e0375556b8f7016e2afd08c6"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T105940104979Z/20261108T105940163003Z-cloud-1vu-r1.analysis.json",
+      "bytes": 511,
+      "sha256": "d4db617f3a32775c5071666dec5f53b7ac788acfe984df3da3a03807b4c1cdad"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T105940104979Z/20261108T105940163003Z-cloud-1vu-r1.summary.json",
+      "bytes": 5581,
+      "sha256": "6a4282ae85dbe6e853e03973f68fe8c7183ff6b5a3cc19465465f78287644568"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T105940104979Z/20261108T111440742734Z-cloud-10vu-r1.analysis.json",
+      "bytes": 512,
+      "sha256": "4e28158ee80b37ca9c3b29233bc08f12422e2d32f49af284ee244eae7c489ca3"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T105940104979Z/20261108T111440742734Z-cloud-10vu-r1.summary.json",
+      "bytes": 5639,
+      "sha256": "f43a7181e1c6835818db01b7d042e47a1b0a4748173b0811fa0e60f00bc74ab8"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T105940104979Z/20261108T112940655080Z-cloud-25vu-r1.analysis.json",
+      "bytes": 516,
+      "sha256": "7b2faad0dadea09cb3510f144ffc15a4382f484102315bd5155c5b811d3d8823"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T105940104979Z/20261108T112940655080Z-cloud-25vu-r1.summary.json",
+      "bytes": 5699,
+      "sha256": "f0c4e3b6a18ea2276f012181f880e80f682bc0594805a9493b42b5c9e2249f8b"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T105940104979Z/20261108T114441013984Z-cloud-50vu-r1.analysis.json",
+      "bytes": 517,
+      "sha256": "f8bb1089d65c4f7b706c73756a01e36c295f818dbc543f06c6e46477a6932b61"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T105940104979Z/20261108T114441013984Z-cloud-50vu-r1.summary.json",
+      "bytes": 5559,
+      "sha256": "ee084faf7a43ad8db8ca867e3f5256fb6cecc9402743daedcc9851bed332ee58"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T105940104979Z/20261108T115940345076Z-cloud-100vu-r1.analysis.json",
+      "bytes": 521,
+      "sha256": "98f1c6b0b4f194937e1f07d7f97ead29639bfa64c1a33ca2b093947fa6d136cd"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T105940104979Z/20261108T115940345076Z-cloud-100vu-r1.summary.json",
+      "bytes": 5646,
+      "sha256": "623af0b7c523cb9cb133fc42ce4cc8f8d4cf084e3257167b48524e3b1ed71f93"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T105940104979Z/20261108T121440739764Z-cloud-200vu-r1.analysis.json",
+      "bytes": 518,
+      "sha256": "c42b954504225083168395554392b6d7c80d41f2fba32c09025e5e49f3a9220b"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T105940104979Z/20261108T121440739764Z-cloud-200vu-r1.summary.json",
+      "bytes": 5662,
+      "sha256": "f745d27cbeea0073ba4ebe7e5c2cb1886f8769dc27782d174f088913a66e2921"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T105940104979Z/20261108T122940551763Z-cloud-400vu-r1.analysis.json",
+      "bytes": 526,
+      "sha256": "4e1df954a96a3e7bc9ca3384af78b96d8690d2517b1a9b059ba779ca1d9449bf"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T105940104979Z/20261108T122940551763Z-cloud-400vu-r1.summary.json",
+      "bytes": 5684,
+      "sha256": "c0d13d21586eec3e1a591c81aa40f8f6d8d7798206e94d57ebb3fdb439f4e9f6"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T105940104979Z/20261108T124440243217Z-cloud-500vu-r1.analysis.json",
+      "bytes": 532,
+      "sha256": "fc473eceda9429f9067277ff8c0c666d9f5fb126c9ebc375fa31af6a8148933a"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T105940104979Z/20261108T124440243217Z-cloud-500vu-r1.summary.json",
+      "bytes": 5581,
+      "sha256": "e5d96e40147f97cc9bc048919be85e64639f0d5eecd78d3bddf460aca4ac4249"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T105940104979Z/comparison.csv",
+      "bytes": 1016,
+      "sha256": "c944dda50162d58e5e30397c2e231b64f5593c808c6b2aaac88523e05ff8709a"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T132130479091Z/20261108T132130535664Z-cloud-500vu-r1.analysis.json",
+      "bytes": 547,
+      "sha256": "095fc06d1d2ab2293f8a7515a4b490bfc067bc244725f81f50f67464f1f249a1"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T132130479091Z/20261108T132130535664Z-cloud-500vu-r1.summary.json",
+      "bytes": 5690,
+      "sha256": "f51269e966bb2d486a977258f3de452872adbb6011da37ba4d1591309e780941"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-20261108T132130479091Z/comparison.csv",
+      "bytes": 252,
+      "sha256": "3a09d6728298e0ce6f4cf94e35a5c1723d6238c3045dd9b64c48f7d505e44c28"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-vs-onprem-20261108/aws_monitoring_findings.md",
+      "bytes": 6461,
+      "sha256": "618416a2c743cd864f5c338be2b9461c956077b5c71d5849a54b8ec89daf148f"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-vs-onprem-20261108/cloud_vs_onprem.png",
+      "bytes": 193579,
+      "sha256": "16c106040b7626c9a60be35f8e952382365581aec652d0795428bf666fc496d5"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-vs-onprem-20261108/cloud_vs_onprem.svg",
+      "bytes": 97371,
+      "sha256": "75859dc666b855b93ba6581314fb4fd24445f1ddf5d8e7d0dca2d18fd4699429"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-vs-onprem-20261108/comparison_data.json",
+      "bytes": 22661,
+      "sha256": "c849a7a16fa571d3067d2c5baa7bb535979fed68e86bd1198d75c0f3a4076aa3"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-vs-onprem-20261108/comparison_report.md",
+      "bytes": 10247,
+      "sha256": "96a10b790ee81775cfeb656bf9efead54066beea638f1f9b4be78ace74815542"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-vs-onprem-20261108/latency_investigation.json",
+      "bytes": 17704,
+      "sha256": "899b9962f8ed728ed9b8ff0e7b3b4431d44230ca0c31e706bf4e0af4edab6f0e"
+    },
+    {
+      "file": "evaluation/performance/results/cloud-vs-onprem-20261108/latency_investigation.md",
+      "bytes": 9188,
+      "sha256": "7ce939a1dec49feebbe7ebf8da2b864b59c11c17991cc6fd7740c63b4e31fed7"
+    },
+    {
+      "file": "evaluation/README.md",
+      "bytes": 2742,
+      "sha256": "8959bec5909a481344a76a3b7dcadd0eb65c409793aa363273a00dd2578e9dd6"
+    },
+    {
+      "file": "evaluation/report_sections_carlo.md",
+      "bytes": 14266,
+      "sha256": "d4576bc221c66af3b5bfcc3cdcbb12bee9c4f0214858214920bb6476899d4dcd"
+    }
+  ]
+}

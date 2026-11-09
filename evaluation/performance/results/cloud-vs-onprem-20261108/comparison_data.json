@@ -1,0 +1,630 @@
+{
+  "aggregation": "Median across complete individual runs; p95 medians are not pooled percentiles. Partial runs retained separately; no completed-window throughput assigned.",
+  "sources": [
+    {
+      "path": "results/capacity-20261107/20261107T065527Z-1vu-r1.analysis.json",
+      "sha256": "c49620212ae23d2027301d0d2731e0cfb568b9544d3a84387ef93fd7e0ffecf8"
+    },
+    {
+      "path": "results/capacity-20261107/20261107T065644Z-10vu-r1.analysis.json",
+      "sha256": "79d03a0def253dd2d14f4859aac21c7d20421b6204e821798f890dd1c473e730"
+    },
+    {
+      "path": "results/capacity-20261107/20261107T065809Z-25vu-r1.analysis.json",
+      "sha256": "a26274564acb30edcd3460677c24bb56a9898eb8e8d4acb326c329f9069875aa"
+    },
+    {
+      "path": "results/capacity-20261107/20261107T065933Z-50vu-r1.analysis.json",
+      "sha256": "d8c77c622c1af024961d5458e6e230375eee569f333127002ab82ca4b64a9d17"
+    },
+    {
+      "path": "results/capacity-20261107/20261107T070057Z-100vu-r1.analysis.json",
+      "sha256": "bacdceb36792b51892d00cdbeee489ab4daa45d7e73ab1451e43f394bee3c1c7"
+    },
+    {
+      "path": "results/capacity-20261107/20261107T070235Z-200vu-r1.analysis.json",
+      "sha256": "c16d1e94f45ec9459d26d91f85c8acca931cc5f4f6d1501f68e7dc08aacc29aa"
+    },
+    {
+      "path": "results/capacity-20261107/20261107T070400Z-400vu-r1.analysis.json",
+      "sha256": "6bf5598c34be6c26ad17f24fce5f29cc1e210e16e9618ab7bde50e8b87d86522"
+    },
+    {
+      "path": "results/capacity-20261107/20261107T070526Z-800vu-r1.analysis.json",
+      "sha256": "d746a75580e69c970145e6ad869ebe7823ae627f7495a989e4976875f1a2e70c"
+    },
+    {
+      "path": "results/capacity-20261107/20261107T070725Z-600vu-r1.analysis.json",
+      "sha256": "56504bbb6381b613ca3173c9bbd6a2c37e1b3ce6242c5f8f7342367a442ece0a"
+    },
+    {
+      "path": "results/capacity-20261107/20261107T071058Z-400vu-r1.analysis.json",
+      "sha256": "adbe14b66020a244061daede7f34d2cd3bfdd263273b0e182f4a96c236a03e98"
+    },
+    {
+      "path": "results/capacity-20261107/20261107T071315Z-500vu-r1.analysis.json",
+      "sha256": "cfa39186cab59de99742e07d0083cad885ccea9134f6e2a4ae0dfeec32b3def9"
+    },
+    {
+      "path": "results/capacity-20261107/20261107T071533Z-500vu-r1.analysis.json",
+      "sha256": "5e8c5e9392d6bab9d8ff2e0bbda6e2a926514371d92d46b9c300feb4f0624cab"
+    },
+    {
+      "path": "results/cloud-20261108T105940104979Z/20261108T105940163003Z-cloud-1vu-r1.analysis.json",
+      "sha256": "f0845f5f4abf7a1ae777cc4e708619c49a104eb38cd3e4f06ab8323a69a6dc87"
+    },
+    {
+      "path": "results/cloud-20261108T105940104979Z/20261108T111440742734Z-cloud-10vu-r1.analysis.json",
+      "sha256": "29089a98bf8b6dfe60a6d4f379df6b357e81f1bb44d46638a831db3d02afbabf"
+    },
+    {
+      "path": "results/cloud-20261108T105940104979Z/20261108T112940655080Z-cloud-25vu-r1.analysis.json",
+      "sha256": "ebe8df6c3534432bee92273e9e98641f6fa84b5f91785a586577cc53dba3d0ec"
+    },
+    {
+      "path": "results/cloud-20261108T105940104979Z/20261108T114441013984Z-cloud-50vu-r1.analysis.json",
+      "sha256": "767ff27be9e234ca6cb0e5d151a204cb963d8e0a4ff9386823613cc88ab6ab7e"
+    },
+    {
+      "path": "results/cloud-20261108T105940104979Z/20261108T115940345076Z-cloud-100vu-r1.analysis.json",
+      "sha256": "f9ed89f5c71a72b980d6e8c128797c62f44a968352961ad45fe492c8009537dc"
+    },
+    {
+      "path": "results/cloud-20261108T105940104979Z/20261108T121440739764Z-cloud-200vu-r1.analysis.json",
+      "sha256": "0c0c80401fe23567ea28b03c91373b1710523cb2b254fd29b024aa5608bc57be"
+    },
+    {
+      "path": "results/cloud-20261108T105940104979Z/20261108T122940551763Z-cloud-400vu-r1.analysis.json",
+      "sha256": "a10357a24abb7d946b6cb7fe98136182e89d473d89e690ec741027ffd739d8a2"
+    },
+    {
+      "path": "results/cloud-20261108T105940104979Z/20261108T124440243217Z-cloud-500vu-r1.analysis.json",
+      "sha256": "504e6706b600dcaf3d9b34f7fbcb8b32afb73dc8340e7a7d7a9814baa7f1c940"
+    },
+    {
+      "path": "results/cloud-20261108T132130479091Z/20261108T132130535664Z-cloud-500vu-r1.analysis.json",
+      "sha256": "6e3ed27920d6e5748b046760b831f604984baa1b8fbcde7dcd9d7a4fc7a60fa1"
+    }
+  ],
+  "runs": [
+    {
+      "environment": "On-prem",
+      "vus": 1,
+      "run_id": "20261107T065527Z-1vu-r1",
+      "source_analysis": "results/capacity-20261107/20261107T065527Z-1vu-r1.analysis.json",
+      "started_utc": "2026-11-07T06:55:27.834569+00:00",
+      "finished_utc": "2026-11-07T06:56:44.878506+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 1.4,
+      "completed_window_p95_ms": 16.187974399999998,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0,
+      "slo_pass": true,
+      "exit_code": 0
+    },
+    {
+      "environment": "On-prem",
+      "vus": 10,
+      "run_id": "20261107T065644Z-10vu-r1",
+      "source_analysis": "results/capacity-20261107/20261107T065644Z-10vu-r1.analysis.json",
+      "started_utc": "2026-11-07T06:56:44.889826+00:00",
+      "finished_utc": "2026-11-07T06:58:09.295806+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 15.35,
+      "completed_window_p95_ms": 13.175422,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0,
+      "slo_pass": true,
+      "exit_code": 0
+    },
+    {
+      "environment": "On-prem",
+      "vus": 25,
+      "run_id": "20261107T065809Z-25vu-r1",
+      "source_analysis": "results/capacity-20261107/20261107T065809Z-25vu-r1.analysis.json",
+      "started_utc": "2026-11-07T06:58:09.306386+00:00",
+      "finished_utc": "2026-11-07T06:59:33.218398+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 37.55,
+      "completed_window_p95_ms": 13.023898800000005,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0,
+      "slo_pass": true,
+      "exit_code": 0
+    },
+    {
+      "environment": "On-prem",
+      "vus": 50,
+      "run_id": "20261107T065933Z-50vu-r1",
+      "source_analysis": "results/capacity-20261107/20261107T065933Z-50vu-r1.analysis.json",
+      "started_utc": "2026-11-07T06:59:33.229749+00:00",
+      "finished_utc": "2026-11-07T07:00:57.298652+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 75.25,
+      "completed_window_p95_ms": 11.583442800000025,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0,
+      "slo_pass": true,
+      "exit_code": 0
+    },
+    {
+      "environment": "On-prem",
+      "vus": 100,
+      "run_id": "20261107T070057Z-100vu-r1",
+      "source_analysis": "results/capacity-20261107/20261107T070057Z-100vu-r1.analysis.json",
+      "started_utc": "2026-11-07T07:00:57.311918+00:00",
+      "finished_utc": "2026-11-07T07:02:21.798331+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 150.6,
+      "completed_window_p95_ms": 14.92905575,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0,
+      "slo_pass": true,
+      "exit_code": 0
+    },
+    {
+      "environment": "On-prem",
+      "vus": 200,
+      "run_id": "20261107T070235Z-200vu-r1",
+      "source_analysis": "results/capacity-20261107/20261107T070235Z-200vu-r1.analysis.json",
+      "started_utc": "2026-11-07T07:02:35.053332+00:00",
+      "finished_utc": "2026-11-07T07:04:00.787396+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 297.75,
+      "completed_window_p95_ms": 25.67344659999998,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0,
+      "slo_pass": true,
+      "exit_code": 0
+    },
+    {
+      "environment": "On-prem",
+      "vus": 400,
+      "run_id": "20261107T070400Z-400vu-r1",
+      "source_analysis": "results/capacity-20261107/20261107T070400Z-400vu-r1.analysis.json",
+      "started_utc": "2026-11-07T07:04:00.797398+00:00",
+      "finished_utc": "2026-11-07T07:05:26.637351+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 573.0,
+      "completed_window_p95_ms": 118.70535704999993,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0,
+      "slo_pass": true,
+      "exit_code": 0
+    },
+    {
+      "environment": "On-prem",
+      "vus": 800,
+      "run_id": "20261107T070526Z-800vu-r1",
+      "source_analysis": "results/capacity-20261107/20261107T070526Z-800vu-r1.analysis.json",
+      "started_utc": "2026-11-07T07:05:26.646453+00:00",
+      "finished_utc": "2026-11-07T07:06:50.591139+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 662.1666666666666,
+      "completed_window_p95_ms": 736.4926051999997,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0.0014326287480835448,
+      "slo_pass": false,
+      "exit_code": 99
+    },
+    {
+      "environment": "On-prem",
+      "vus": 600,
+      "run_id": "20261107T070725Z-600vu-r1",
+      "source_analysis": "results/capacity-20261107/20261107T070725Z-600vu-r1.analysis.json",
+      "started_utc": "2026-11-07T07:07:25.369092+00:00",
+      "finished_utc": "2026-11-07T07:08:54.361589+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 649.7666666666667,
+      "completed_window_p95_ms": 391.074164,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0.03942246094712462,
+      "slo_pass": false,
+      "exit_code": 99
+    },
+    {
+      "environment": "On-prem",
+      "vus": 400,
+      "run_id": "20261107T071058Z-400vu-r1",
+      "source_analysis": "results/capacity-20261107/20261107T071058Z-400vu-r1.analysis.json",
+      "started_utc": "2026-11-07T07:10:58.420194+00:00",
+      "finished_utc": "2026-11-07T07:12:22.733604+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 557.85,
+      "completed_window_p95_ms": 232.593084,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0,
+      "slo_pass": true,
+      "exit_code": 0
+    },
+    {
+      "environment": "On-prem",
+      "vus": 500,
+      "run_id": "20261107T071315Z-500vu-r1",
+      "source_analysis": "results/capacity-20261107/20261107T071315Z-500vu-r1.analysis.json",
+      "started_utc": "2026-11-07T07:13:15.529620+00:00",
+      "finished_utc": "2026-11-07T07:14:40.503442+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 613.2,
+      "completed_window_p95_ms": 342.3793675,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0.04612273469705219,
+      "slo_pass": false,
+      "exit_code": 99
+    },
+    {
+      "environment": "On-prem",
+      "vus": 500,
+      "run_id": "20261107T071533Z-500vu-r1",
+      "source_analysis": "results/capacity-20261107/20261107T071533Z-500vu-r1.analysis.json",
+      "started_utc": "2026-11-07T07:15:33.393873+00:00",
+      "finished_utc": "2026-11-07T07:16:58.663689+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 627.15,
+      "completed_window_p95_ms": 370.77682679999987,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0.025962932284116794,
+      "slo_pass": false,
+      "exit_code": 99
+    },
+    {
+      "environment": "AWS",
+      "vus": 1,
+      "run_id": "20261108T105940163003Z-cloud-1vu-r1",
+      "source_analysis": "results/cloud-20261108T105940104979Z/20261108T105940163003Z-cloud-1vu-r1.analysis.json",
+      "started_utc": "2026-11-08T10:59:40.163003+00:00",
+      "finished_utc": "2026-11-08T11:00:58.275466+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 1.5,
+      "completed_window_p95_ms": 23.247535949999985,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0,
+      "slo_pass": true,
+      "exit_code": 0
+    },
+    {
+      "environment": "AWS",
+      "vus": 10,
+      "run_id": "20261108T111440742734Z-cloud-10vu-r1",
+      "source_analysis": "results/cloud-20261108T105940104979Z/20261108T111440742734Z-cloud-10vu-r1.analysis.json",
+      "started_utc": "2026-11-08T11:14:40.742734+00:00",
+      "finished_utc": "2026-11-08T11:15:59.147016+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 14.95,
+      "completed_window_p95_ms": 79.64749579999999,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0,
+      "slo_pass": true,
+      "exit_code": 0
+    },
+    {
+      "environment": "AWS",
+      "vus": 25,
+      "run_id": "20261108T112940655080Z-cloud-25vu-r1",
+      "source_analysis": "results/cloud-20261108T105940104979Z/20261108T112940655080Z-cloud-25vu-r1.analysis.json",
+      "started_utc": "2026-11-08T11:29:40.655080+00:00",
+      "finished_utc": "2026-11-08T11:31:04.484298+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 36.25,
+      "completed_window_p95_ms": 41.513300799999996,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0,
+      "slo_pass": true,
+      "exit_code": 0
+    },
+    {
+      "environment": "AWS",
+      "vus": 50,
+      "run_id": "20261108T114441013984Z-cloud-50vu-r1",
+      "source_analysis": "results/cloud-20261108T105940104979Z/20261108T114441013984Z-cloud-50vu-r1.analysis.json",
+      "started_utc": "2026-11-08T11:44:41.013984+00:00",
+      "finished_utc": "2026-11-08T11:46:04.745017+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 75.25,
+      "completed_window_p95_ms": 37.71460660000001,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0,
+      "slo_pass": true,
+      "exit_code": 0
+    },
+    {
+      "environment": "AWS",
+      "vus": 100,
+      "run_id": "20261108T115940345076Z-cloud-100vu-r1",
+      "source_analysis": "results/cloud-20261108T105940104979Z/20261108T115940345076Z-cloud-100vu-r1.analysis.json",
+      "started_utc": "2026-11-08T11:59:40.345076+00:00",
+      "finished_utc": "2026-11-08T12:01:03.975940+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 148.2,
+      "completed_window_p95_ms": 81.11390099999957,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0,
+      "slo_pass": true,
+      "exit_code": 0
+    },
+    {
+      "environment": "AWS",
+      "vus": 200,
+      "run_id": "20261108T121440739764Z-cloud-200vu-r1",
+      "source_analysis": "results/cloud-20261108T105940104979Z/20261108T121440739764Z-cloud-200vu-r1.analysis.json",
+      "started_utc": "2026-11-08T12:14:40.739764+00:00",
+      "finished_utc": "2026-11-08T12:16:04.492708+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 293.5,
+      "completed_window_p95_ms": 140.24085389999993,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0,
+      "slo_pass": true,
+      "exit_code": 0
+    },
+    {
+      "environment": "AWS",
+      "vus": 400,
+      "run_id": "20261108T122940551763Z-cloud-400vu-r1",
+      "source_analysis": "results/cloud-20261108T105940104979Z/20261108T122940551763Z-cloud-400vu-r1.analysis.json",
+      "started_utc": "2026-11-08T12:29:40.551763+00:00",
+      "finished_utc": "2026-11-08T12:31:04.449332+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 594.8,
+      "completed_window_p95_ms": 33.72012150000002,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0,
+      "slo_pass": true,
+      "exit_code": 0
+    },
+    {
+      "environment": "AWS",
+      "vus": 500,
+      "run_id": "20261108T124440243217Z-cloud-500vu-r1",
+      "source_analysis": "results/cloud-20261108T105940104979Z/20261108T124440243217Z-cloud-500vu-r1.analysis.json",
+      "started_utc": "2026-11-08T12:44:40.243217+00:00",
+      "finished_utc": "2026-11-08T12:45:18.137127+00:00",
+      "complete_measurement": false,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 17.729662895202637,
+      "completed_window_successful_rps": null,
+      "completed_window_p95_ms": null,
+      "partial_window_p95_ms": 3836.0645848,
+      "http_error_rate": 0,
+      "slo_pass": false,
+      "exit_code": 99
+    },
+    {
+      "environment": "AWS",
+      "vus": 500,
+      "run_id": "20261108T132130535664Z-cloud-500vu-r1",
+      "source_analysis": "results/cloud-20261108T132130479091Z/20261108T132130535664Z-cloud-500vu-r1.analysis.json",
+      "started_utc": "2026-11-08T13:21:30.535664+00:00",
+      "finished_utc": "2026-11-08T13:22:49.922591+00:00",
+      "complete_measurement": true,
+      "planned_seconds": 60,
+      "observed_measure_span_seconds": 60,
+      "completed_window_successful_rps": 622.2666666666667,
+      "completed_window_p95_ms": 760.4723195,
+      "partial_window_p95_ms": null,
+      "http_error_rate": 0,
+      "slo_pass": false,
+      "exit_code": 99
+    }
+  ],
+  "summary": [
+    {
+      "environment": "AWS",
+      "vus": 1,
+      "total_trials": 1,
+      "complete_trials": 1,
+      "median_successful_rps": 1.5,
+      "median_run_p95_ms": 23.247535949999985,
+      "worst_http_error_rate": 0,
+      "all_trials_pass": true
+    },
+    {
+      "environment": "AWS",
+      "vus": 10,
+      "total_trials": 1,
+      "complete_trials": 1,
+      "median_successful_rps": 14.95,
+      "median_run_p95_ms": 79.64749579999999,
+      "worst_http_error_rate": 0,
+      "all_trials_pass": true
+    },
+    {
+      "environment": "AWS",
+      "vus": 25,
+      "total_trials": 1,
+      "complete_trials": 1,
+      "median_successful_rps": 36.25,
+      "median_run_p95_ms": 41.513300799999996,
+      "worst_http_error_rate": 0,
+      "all_trials_pass": true
+    },
+    {
+      "environment": "AWS",
+      "vus": 50,
+      "total_trials": 1,
+      "complete_trials": 1,
+      "median_successful_rps": 75.25,
+      "median_run_p95_ms": 37.71460660000001,
+      "worst_http_error_rate": 0,
+      "all_trials_pass": true
+    },
+    {
+      "environment": "AWS",
+      "vus": 100,
+      "total_trials": 1,
+      "complete_trials": 1,
+      "median_successful_rps": 148.2,
+      "median_run_p95_ms": 81.11390099999957,
+      "worst_http_error_rate": 0,
+      "all_trials_pass": true
+    },
+    {
+      "environment": "AWS",
+      "vus": 200,
+      "total_trials": 1,
+      "complete_trials": 1,
+      "median_successful_rps": 293.5,
+      "median_run_p95_ms": 140.24085389999993,
+      "worst_http_error_rate": 0,
+      "all_trials_pass": true
+    },
+    {
+      "environment": "AWS",
+      "vus": 400,
+      "total_trials": 1,
+      "complete_trials": 1,
+      "median_successful_rps": 594.8,
+      "median_run_p95_ms": 33.72012150000002,
+      "worst_http_error_rate": 0,
+      "all_trials_pass": true
+    },
+    {
+      "environment": "AWS",
+      "vus": 500,
+      "total_trials": 2,
+      "complete_trials": 1,
+      "median_successful_rps": 622.2666666666667,
+      "median_run_p95_ms": 760.4723195,
+      "worst_http_error_rate": 0,
+      "all_trials_pass": false
+    },
+    {
+      "environment": "On-prem",
+      "vus": 1,
+      "total_trials": 1,
+      "complete_trials": 1,
+      "median_successful_rps": 1.4,
+      "median_run_p95_ms": 16.187974399999998,
+      "worst_http_error_rate": 0,
+      "all_trials_pass": true
+    },
+    {
+      "environment": "On-prem",
+      "vus": 10,
+      "total_trials": 1,
+      "complete_trials": 1,
+      "median_successful_rps": 15.35,
+      "median_run_p95_ms": 13.175422,
+      "worst_http_error_rate": 0,
+      "all_trials_pass": true
+    },
+    {
+      "environment": "On-prem",
+      "vus": 25,
+      "total_trials": 1,
+      "complete_trials": 1,
+      "median_successful_rps": 37.55,
+      "median_run_p95_ms": 13.023898800000005,
+      "worst_http_error_rate": 0,
+      "all_trials_pass": true
+    },
+    {
+      "environment": "On-prem",
+      "vus": 50,
+      "total_trials": 1,
+      "complete_trials": 1,
+      "median_successful_rps": 75.25,
+      "median_run_p95_ms": 11.583442800000025,
+      "worst_http_error_rate": 0,
+      "all_trials_pass": true
+    },
+    {
+      "environment": "On-prem",
+      "vus": 100,
+      "total_trials": 1,
+      "complete_trials": 1,
+      "median_successful_rps": 150.6,
+      "median_run_p95_ms": 14.92905575,
+      "worst_http_error_rate": 0,
+      "all_trials_pass": true
+    },
+    {
+      "environment": "On-prem",
+      "vus": 200,
+      "total_trials": 1,
+      "complete_trials": 1,
+      "median_successful_rps": 297.75,
+      "median_run_p95_ms": 25.67344659999998,
+      "worst_http_error_rate": 0,
+      "all_trials_pass": true
+    },
+    {
+      "environment": "On-prem",
+      "vus": 400,
+      "total_trials": 2,
+      "complete_trials": 2,
+      "median_successful_rps": 565.425,
+      "median_run_p95_ms": 175.64922052499998,
+      "worst_http_error_rate": 0,
+      "all_trials_pass": true
+    },
+    {
+      "environment": "On-prem",
+      "vus": 500,
+      "total_trials": 2,
+      "complete_trials": 2,
+      "median_successful_rps": 620.175,
+      "median_run_p95_ms": 356.57809714999996,
+      "worst_http_error_rate": 0.04612273469705219,
+      "all_trials_pass": false
+    },
+    {
+      "environment": "On-prem",
+      "vus": 600,
+      "total_trials": 1,
+      "complete_trials": 1,
+      "median_successful_rps": 649.7666666666667,
+      "median_run_p95_ms": 391.074164,
+      "worst_http_error_rate": 0.03942246094712462,
+      "all_trials_pass": false
+    },
+    {
+      "environment": "On-prem",
+      "vus": 800,
+      "total_trials": 1,
+      "complete_trials": 1,
+      "median_successful_rps": 662.1666666666666,
+      "median_run_p95_ms": 736.4926051999997,
+      "worst_http_error_rate": 0.0014326287480835448,
+      "all_trials_pass": false
+    }
+  ]
+}

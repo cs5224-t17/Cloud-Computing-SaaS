@@ -1,0 +1,361 @@
+{
+  "source_commit": "64a03d7741e9779c799a36014c544ff21fb89651",
+  "metrics": {
+    "alb_connections": {
+      "ActiveConnectionCount": {
+        "count": 55,
+        "min": 1.0,
+        "max": 1171.0,
+        "sum": 7330.0
+      },
+      "NewConnectionCount": {
+        "count": 44,
+        "min": 1.0,
+        "max": 1076.0,
+        "sum": 5373.0
+      }
+    },
+    "alb_errors": {
+      "HTTPCode_Target_4XX_Count": {
+        "count": 10,
+        "min": 1.0,
+        "max": 4.0,
+        "sum": 17.0
+      }
+    },
+    "alb_requests": {
+      "RequestCount": {
+        "count": 174,
+        "min": 0.0,
+        "max": 32907.0,
+        "sum": 137710.0
+      }
+    },
+    "alb_response_time": {
+      "Average": {
+        "count": 44,
+        "min": 0.0015,
+        "max": 0.078,
+        "sum": 0.8726
+      },
+      "p50": {
+        "count": 44,
+        "min": 0.0015,
+        "max": 0.0428,
+        "sum": 0.6176
+      },
+      "p95": {
+        "count": 44,
+        "min": 0.0015,
+        "max": 0.2883,
+        "sum": 1.8046
+      },
+      "p99": {
+        "count": 44,
+        "min": 0.0015,
+        "max": 1.0039,
+        "sum": 5.5368
+      }
+    },
+    "ec2_cpu": {
+      "ASG average": {
+        "count": 35,
+        "min": 0.3784,
+        "max": 9.6294,
+        "sum": 46.5233
+      },
+      "ASG maximum": {
+        "count": 35,
+        "min": 0.4585,
+        "max": 33.4,
+        "sum": 122.767
+      },
+      "per instance i-0083b8f81860913f1": {
+        "count": 35,
+        "min": 0.3784,
+        "max": 9.6294,
+        "sum": 46.5233
+      }
+    },
+    "ec2_cpu_credits": {
+      "balance i-0083b8f81860913f1 CPUCreditBalance": {
+        "count": 35,
+        "min": 273.9836,
+        "max": 288.0,
+        "sum": 9967.0994
+      },
+      "usage i-0083b8f81860913f1 CPUCreditUsage": {
+        "count": 35,
+        "min": 0.0416,
+        "max": 0.9707,
+        "sum": 4.7026
+      }
+    },
+    "instance_count": {
+      "HealthyHostCount": {
+        "count": 174,
+        "min": 1.0,
+        "max": 1.0,
+        "sum": 174.0
+      },
+      "UnHealthyHostCount": {
+        "count": 174,
+        "min": 0.0,
+        "max": 0.0,
+        "sum": 0.0
+      }
+    },
+    "rds_connections": {
+      "Maximum": {
+        "count": 174,
+        "min": 0.0,
+        "max": 10.0,
+        "sum": 245.0
+      }
+    },
+    "rds_cpu": {
+      "Average": {
+        "count": 174,
+        "min": 3.208,
+        "max": 29.8648,
+        "sum": 778.3685
+      },
+      "Maximum": {
+        "count": 174,
+        "min": 3.208,
+        "max": 29.8648,
+        "sum": 778.3685
+      }
+    },
+    "rds_cpu_credits": {
+      "Average": {
+        "count": 35,
+        "min": 287.588,
+        "max": 288.0,
+        "sum": 10079.3245
+      }
+    },
+    "rds_memory": {
+      "Minimum": {
+        "count": 174,
+        "min": 178.8516,
+        "max": 224.7266,
+        "sum": 36562.535
+      }
+    }
+  },
+  "activities_in_window": [],
+  "daily_nov_sum_usd": 21.689999999999998,
+  "service_period_totals_usd": {
+    "2026-10-01..2026-11-01": 38.86,
+    "2026-11-01..2026-11-10": 21.67
+  },
+  "nov8_daily_usd": 1.69,
+  "nov8_730_hour_run_rate_usd": 51.40416666666667,
+  "test_minute_windows": {
+    "400": {
+      "alb_response_time": {
+        "Average": {
+          "min": 0.0032,
+          "max": 0.0348,
+          "sum": 0.0433,
+          "n": 3
+        },
+        "p50": {
+          "min": 0.0031,
+          "max": 0.0036,
+          "sum": 0.009899999999999999,
+          "n": 3
+        },
+        "p95": {
+          "min": 0.0032,
+          "max": 0.0749,
+          "sum": 0.09079999999999999,
+          "n": 3
+        },
+        "p99": {
+          "min": 0.0032,
+          "max": 0.9531,
+          "sum": 0.9895999999999999,
+          "n": 3
+        }
+      },
+      "alb_requests": {
+        "RequestCount": {
+          "min": 1.0,
+          "max": 32907.0,
+          "sum": 40768.0,
+          "n": 3
+        }
+      },
+      "rds_connections": {
+        "Maximum": {
+          "min": 1.0,
+          "max": 10.0,
+          "sum": 21.0,
+          "n": 3
+        }
+      },
+      "rds_cpu": {
+        "Average": {
+          "min": 4.6723,
+          "max": 29.8648,
+          "sum": 41.724,
+          "n": 3
+        },
+        "Maximum": {
+          "min": 4.6723,
+          "max": 29.8648,
+          "sum": 41.724,
+          "n": 3
+        }
+      },
+      "rds_memory": {
+        "Minimum": {
+          "min": 188.7578,
+          "max": 216.9414,
+          "sum": 594.8398,
+          "n": 3
+        }
+      }
+    },
+    "500_initial": {
+      "alb_response_time": {
+        "Average": {
+          "min": 0.0292,
+          "max": 0.078,
+          "sum": 0.1072,
+          "n": 2
+        },
+        "p50": {
+          "min": 0.0164,
+          "max": 0.0384,
+          "sum": 0.0548,
+          "n": 2
+        },
+        "p95": {
+          "min": 0.0981,
+          "max": 0.1983,
+          "sum": 0.2964,
+          "n": 2
+        },
+        "p99": {
+          "min": 0.2078,
+          "max": 0.9159,
+          "sum": 1.1237000000000001,
+          "n": 2
+        }
+      },
+      "alb_requests": {
+        "RequestCount": {
+          "min": 5968.0,
+          "max": 8035.0,
+          "sum": 14003.0,
+          "n": 2
+        }
+      },
+      "rds_connections": {
+        "Maximum": {
+          "min": 1.0,
+          "max": 10.0,
+          "sum": 11.0,
+          "n": 2
+        }
+      },
+      "rds_cpu": {
+        "Average": {
+          "min": 4.7167,
+          "max": 13.3074,
+          "sum": 18.0241,
+          "n": 2
+        },
+        "Maximum": {
+          "min": 4.7167,
+          "max": 13.3074,
+          "sum": 18.0241,
+          "n": 2
+        }
+      },
+      "rds_memory": {
+        "Minimum": {
+          "min": 187.3359,
+          "max": 217.3555,
+          "sum": 404.69140000000004,
+          "n": 2
+        }
+      }
+    },
+    "500_repeat": {
+      "alb_response_time": {
+        "Average": {
+          "min": 0.0299,
+          "max": 0.0572,
+          "sum": 0.0871,
+          "n": 2
+        },
+        "p50": {
+          "min": 0.0035,
+          "max": 0.0091,
+          "sum": 0.0126,
+          "n": 2
+        },
+        "p95": {
+          "min": 0.0758,
+          "max": 0.2883,
+          "sum": 0.3641,
+          "n": 2
+        },
+        "p99": {
+          "min": 0.6983,
+          "max": 1.0039,
+          "sum": 1.7022,
+          "n": 2
+        }
+      },
+      "alb_requests": {
+        "RequestCount": {
+          "min": 0.0,
+          "max": 26738.0,
+          "sum": 43757.0,
+          "n": 3
+        }
+      },
+      "rds_connections": {
+        "Maximum": {
+          "min": 0.0,
+          "max": 10.0,
+          "sum": 10.0,
+          "n": 3
+        }
+      },
+      "rds_cpu": {
+        "Average": {
+          "min": 3.3851,
+          "max": 29.4201,
+          "sum": 42.8853,
+          "n": 3
+        },
+        "Maximum": {
+          "min": 3.3851,
+          "max": 29.4201,
+          "sum": 42.8853,
+          "n": 3
+        }
+      },
+      "rds_memory": {
+        "Minimum": {
+          "min": 188.1289,
+          "max": 219.7266,
+          "sum": 624.8477,
+          "n": 3
+        }
+      }
+    }
+  },
+  "cautions": [
+    "No direct account access used. Configuration is an exported snapshot, not historical per-second state.",
+    "Daily and service-period files do not reconcile; labels/filters/tax/credit basis require clarification.",
+    "Missing 5xx columns mean no returned nonempty series; they were not stored as explicit zero rows.",
+    "One-minute ALB percentile maxima are not pooled k6 full-run percentiles."
+  ]
+}

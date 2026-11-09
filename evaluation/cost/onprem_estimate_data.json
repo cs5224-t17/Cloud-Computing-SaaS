@@ -1,0 +1,278 @@
+{
+  "prepared": "2026-11-09",
+  "basis": "Laptop purchase price SGD1688 reported by Carlo on 9 November 2026; no wall-socket power readings supplied. Other operating inputs remain labeled estimates.",
+  "inputs": [
+    {
+      "key": "laptop",
+      "label": "Laptop purchase price (SGD)",
+      "cases": [
+        1688,
+        1688,
+        1688
+      ],
+      "note": "Carlo reported actual purchase price SGD1688 on 9 November 2026; same hardware cost across power cases."
+    },
+    {
+      "key": "ups",
+      "label": "Optional UPS capital (SGD)",
+      "cases": [
+        100,
+        150,
+        250
+      ],
+      "note": "Planning allowance only; not installed in the tested stack."
+    },
+    {
+      "key": "backup_capital",
+      "label": "Optional backup device capital (SGD)",
+      "cases": [
+        80,
+        100,
+        150
+      ],
+      "note": "Planning allowance only; not installed in the tested stack."
+    },
+    {
+      "key": "residual",
+      "label": "Residual at horizon (SGD)",
+      "cases": [
+        0,
+        0,
+        0
+      ],
+      "note": "Conservative planning assumption, not observed resale value."
+    },
+    {
+      "key": "life",
+      "label": "Hardware useful life (months)",
+      "cases": [
+        36,
+        36,
+        36
+      ],
+      "note": "Planning horizon, not mandated by lecture."
+    },
+    {
+      "key": "hours",
+      "label": "Operating hours/month",
+      "cases": [
+        730,
+        730,
+        730
+      ],
+      "note": "24/7 planning convention, not measured uptime."
+    },
+    {
+      "key": "watts",
+      "label": "Average wall power (W)",
+      "cases": [
+        15,
+        25,
+        45
+      ],
+      "note": "Unmeasured low/base/high assumptions; not CPU TDP, charger rating or Docker CPU percentage."
+    },
+    {
+      "key": "tariff",
+      "label": "Electricity tariff incl GST (SGD/kWh)",
+      "cases": [
+        0.3116,
+        0.3116,
+        0.3116
+      ],
+      "note": "EMA regulated household tariff for Oct\u2013Dec2026; actual retail contract may differ."
+    },
+    {
+      "key": "cooling",
+      "label": "Additional facility multiplier",
+      "cases": [
+        1,
+        1,
+        1
+      ],
+      "note": "No dedicated cooling budget. Whole-device wall draw assumed; do not add charger/fan power again."
+    },
+    {
+      "key": "maintenance",
+      "label": "Annual maintenance / laptop cost",
+      "cases": [
+        0.02,
+        0.02,
+        0.02
+      ],
+      "note": "Planning allowance; not a paid warranty quotation."
+    },
+    {
+      "key": "admin_hours",
+      "label": "Administration hours/month",
+      "cases": [
+        2,
+        2,
+        2
+      ],
+      "note": "Expanded local budget only; cloud operator labor is excluded from the gross AWS model."
+    },
+    {
+      "key": "admin_rate",
+      "label": "Administration rate (SGD/hour)",
+      "cases": [
+        20,
+        20,
+        20
+      ],
+      "note": "Illustrative opportunity cost, not salary survey evidence."
+    },
+    {
+      "key": "network",
+      "label": "Incremental public-hosting network/month (SGD)",
+      "cases": [
+        20,
+        20,
+        20
+      ],
+      "note": "Expanded budget assumption; not a confirmed ISP plan or measured need."
+    },
+    {
+      "key": "backup_month",
+      "label": "Recurring backup/month (SGD)",
+      "cases": [
+        5,
+        5,
+        5
+      ],
+      "note": "Expanded budget assumption, not a purchased backup service."
+    },
+    {
+      "key": "software",
+      "label": "Additional software/month (SGD)",
+      "cases": [
+        0,
+        0,
+        0
+      ],
+      "note": "Prototype assumes existing OS entitlement and no extra paid subscription; commercial licensing needs separate review."
+    },
+    {
+      "key": "horizon",
+      "label": "TCO horizon (months)",
+      "cases": [
+        36,
+        36,
+        36
+      ],
+      "note": "Constant-use, undiscounted scenario; no tariff or demand escalation."
+    },
+    {
+      "key": "allocation",
+      "label": "Hardware allocated to hosting",
+      "cases": [
+        1,
+        1,
+        1
+      ],
+      "note": "Dedicated-equivalent view assigns 100%; sharing requires a defensible allocation."
+    },
+    {
+      "key": "mau",
+      "label": "Assumed monthly active users",
+      "cases": [
+        100,
+        100,
+        100
+      ],
+      "note": "Business denominator only, not concurrent k6 users or observed users."
+    },
+    {
+      "key": "listings",
+      "label": "Listings",
+      "cases": [
+        28,
+        28,
+        28
+      ],
+      "note": "Observed count in both environments; content/version equivalence is separate."
+    },
+    {
+      "key": "fx",
+      "label": "Planning SGD per USD",
+      "cases": [
+        1.3,
+        1.3,
+        1.3
+      ],
+      "note": "Illustrative conversion, not a verified exchange-rate quotation."
+    },
+    {
+      "key": "cloud_tax",
+      "label": "Assumed cloud GST",
+      "cases": [
+        0.09,
+        0.09,
+        0.09
+      ],
+      "note": "Planning gross-up for a consumer comparison; actual billing tax basis unverified."
+    }
+  ],
+  "aws_gross_month_usd": 65.48881,
+  "aws_daily_usd": 1.69,
+  "expected": [
+    {
+      "case": "Low",
+      "energy_kwh_month": 10.95,
+      "electricity_month_sgd": 3.4120199999999996,
+      "prototype_capital_sgd": 1688,
+      "prototype_hardware_month_sgd": 46.888888888888886,
+      "prototype_month_sgd": 50.300908888888884,
+      "prototype_cash_tco_sgd": 1810.8327199999999,
+      "expanded_capital_sgd": 1868,
+      "expanded_other_opex_sgd": 67.81333333333333,
+      "expanded_month_sgd": 123.11424222222222,
+      "expanded_cash_tco_sgd": 4432.11272,
+      "cloud_modeled_month_sgd": 92.79764377000001,
+      "cloud_modeled_tco_sgd": 3340.7151757200004,
+      "cloud_with_same_operator_sgd": 132.79764377,
+      "daily_export_run_rate_sgd": 66.82541666666667
+    },
+    {
+      "case": "Base",
+      "energy_kwh_month": 18.25,
+      "electricity_month_sgd": 5.6867,
+      "prototype_capital_sgd": 1688,
+      "prototype_hardware_month_sgd": 46.888888888888886,
+      "prototype_month_sgd": 52.57558888888889,
+      "prototype_cash_tco_sgd": 1892.7212,
+      "expanded_capital_sgd": 1938,
+      "expanded_other_opex_sgd": 67.81333333333333,
+      "expanded_month_sgd": 127.33336666666668,
+      "expanded_cash_tco_sgd": 4584.001200000001,
+      "cloud_modeled_month_sgd": 92.79764377000001,
+      "cloud_modeled_tco_sgd": 3340.7151757200004,
+      "cloud_with_same_operator_sgd": 132.79764377,
+      "daily_export_run_rate_sgd": 66.82541666666667
+    },
+    {
+      "case": "High",
+      "energy_kwh_month": 32.85,
+      "electricity_month_sgd": 10.23606,
+      "prototype_capital_sgd": 1688,
+      "prototype_hardware_month_sgd": 46.888888888888886,
+      "prototype_month_sgd": 57.12494888888889,
+      "prototype_cash_tco_sgd": 2056.49816,
+      "expanded_capital_sgd": 2088,
+      "expanded_other_opex_sgd": 67.81333333333333,
+      "expanded_month_sgd": 136.04939333333334,
+      "expanded_cash_tco_sgd": 4897.77816,
+      "cloud_modeled_month_sgd": 92.79764377000001,
+      "cloud_modeled_tco_sgd": 3340.7151757200004,
+      "cloud_with_same_operator_sgd": 132.79764377,
+      "daily_export_run_rate_sgd": 66.82541666666667
+    }
+  ],
+  "sources": {
+    "lecture10": "Local Lecture10, PDFpp14\u201316 and23\u201324: capital, operating and TCO framework.",
+    "lecture04": "Local Lecture04, PDFpp25\u201328: PUE, energy proportionality and reliability/cost.",
+    "laptop": "https://www.bizgram.com/?eflws_download=LG_NOTEBOOK.pdf",
+    "tariff": "https://www.ema.gov.sg/consumer-information/electricity/buying-electricity/buying-at-regulated-tariff",
+    "exports": "https://github.com/cs5224-t17/Cloud-Computing-SaaS/tree/64a03d7741e9779c799a36014c544ff21fb89651/loadtest/aws-2026-11-08"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "requests": 35688,
+  "rps": 594.8,
+  "p50_ms": 10.478502,
+  "p95_ms": 33.72012150000002,
+  "p99_ms": 155.43995831999038,
+  "error_rate": 0,
+  "check_pass_rate": 1,
+  "window_seconds": 60,
+  "observed_measure_span_seconds": 60,
+  "request_mix": {
+    "search": 11896,
+    "facets": 11896,
+    "detail": 11896
+  },
+  "statuses": {
+    "200": 35688
+  },
+  "vus": 400,
+  "repeat": 1,
+  "run_id": "20261108T122940551763Z-cloud-400vu-r1",
+  "exit_code": 0,
+  "stop_reason": null,
+  "successful_rps": 594.8,
+  "slo_pass": true
+}

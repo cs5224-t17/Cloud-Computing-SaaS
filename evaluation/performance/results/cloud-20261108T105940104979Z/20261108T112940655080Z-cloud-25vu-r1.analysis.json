@@ -1,0 +1,26 @@
+{
+  "requests": 2175,
+  "rps": 36.25,
+  "p50_ms": 9.799945,
+  "p95_ms": 41.513300799999996,
+  "p99_ms": 133.06518847999976,
+  "error_rate": 0,
+  "check_pass_rate": 1,
+  "window_seconds": 60,
+  "observed_measure_span_seconds": 60,
+  "request_mix": {
+    "search": 725,
+    "facets": 725,
+    "detail": 725
+  },
+  "statuses": {
+    "200": 2175
+  },
+  "vus": 25,
+  "repeat": 1,
+  "run_id": "20261108T112940655080Z-cloud-25vu-r1",
+  "exit_code": 0,
+  "stop_reason": null,
+  "successful_rps": 36.25,
+  "slo_pass": true
+}

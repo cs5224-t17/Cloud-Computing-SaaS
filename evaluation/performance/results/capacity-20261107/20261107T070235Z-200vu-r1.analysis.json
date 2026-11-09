@@ -1,0 +1,30 @@
+{
+  "requests": 17865,
+  "rps": 297.75,
+  "p50_ms": 5.139315,
+  "p95_ms": 25.67344659999998,
+  "p99_ms": 260.76107932,
+  "error_rate": 0,
+  "check_pass_rate": 1,
+  "window_seconds": 60,
+  "observed_measure_span_seconds": 60,
+  "request_mix": {
+    "search": 5955,
+    "facets": 5955,
+    "detail": 5955
+  },
+  "statuses": {
+    "200": 17865
+  },
+  "vus": 200,
+  "repeat": 1,
+  "exit_code": 0,
+  "run_id": "20261107T070235Z-200vu-r1",
+  "label": "exploration",
+  "generator_cpu_peak_pct": 29.72,
+  "api_cpu_peak_pct": 55.69,
+  "db_cpu_peak_pct": 42.81,
+  "minimum_host_available_gib": 3.660614013671875,
+  "stop_reason": null,
+  "slo_pass": true
+}

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="828pt" height="424.8pt" viewBox="0 0 828 424.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-09T19:37:46.475484</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 424.8
+L 828 424.8
+L 828 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 248.4 331.344
+L 753.48 331.344
+L 753.48 93.456
+L 248.4 93.456
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 248.4 331.344
+L 248.4 93.456
+" clip-path="url(#pea1483ccf8)" style="fill: none; stroke: #e2e8f0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m41cca90b1b" d="M 0 0
+L 0 3.5
+" style="stroke: #142b45; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m41cca90b1b" x="248.4" y="331.344" style="fill: #142b45; stroke: #142b45; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142b45" x="248.4" y="346.701422" transform="rotate(-0 248.4 346.701422)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 341.933333 331.344
+L 341.933333 93.456
+" clip-path="url(#pea1483ccf8)" style="fill: none; stroke: #e2e8f0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m41cca90b1b" x="341.933333" y="331.344" style="fill: #142b45; stroke: #142b45; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142b45" x="341.933333" y="346.701422" transform="rotate(-0 341.933333 346.701422)">5</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 435.466667 331.344
+L 435.466667 93.456
+" clip-path="url(#pea1483ccf8)" style="fill: none; stroke: #e2e8f0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m41cca90b1b" x="435.466667" y="331.344" style="fill: #142b45; stroke: #142b45; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142b45" x="435.466667" y="346.701422" transform="rotate(-0 435.466667 346.701422)">10</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 529 331.344
+L 529 93.456
+" clip-path="url(#pea1483ccf8)" style="fill: none; stroke: #e2e8f0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m41cca90b1b" x="529" y="331.344" style="fill: #142b45; stroke: #142b45; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142b45" x="529" y="346.701422" transform="rotate(-0 529 346.701422)">15</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 622.533333 331.344
+L 622.533333 93.456
+" clip-path="url(#pea1483ccf8)" style="fill: none; stroke: #e2e8f0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m41cca90b1b" x="622.533333" y="331.344" style="fill: #142b45; stroke: #142b45; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142b45" x="622.533333" y="346.701422" transform="rotate(-0 622.533333 346.701422)">20</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 716.066667 331.344
+L 716.066667 93.456
+" clip-path="url(#pea1483ccf8)" style="fill: none; stroke: #e2e8f0; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m41cca90b1b" x="716.066667" y="331.344" style="fill: #142b45; stroke: #142b45; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142b45" x="716.066667" y="346.701422" transform="rotate(-0 716.066667 346.701422)">25</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #142b45" x="500.94" y="361.702281" transform="rotate(-0 500.94 361.702281)">Modeled monthly cost (USD)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13"/>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #142b45" x="244.9" y="120.033686" transform="rotate(-0 244.9 120.033686)">RDS database + storage</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_14"/>
+     <g id="text_9">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #142b45" x="244.9" y="158.651868" transform="rotate(-0 244.9 158.651868)">Load balancer + capacity</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_15"/>
+     <g id="text_10">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #142b45" x="244.9" y="197.27005" transform="rotate(-0 244.9 197.27005)">Public IPv4 addresses</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_16"/>
+     <g id="text_11">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #142b45" x="244.9" y="235.888232" transform="rotate(-0 244.9 235.888232)">EC2 compute + root disk</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_17"/>
+     <g id="text_12">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #142b45" x="244.9" y="274.506413" transform="rotate(-0 244.9 274.506413)">CloudWatch monitoring</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_18"/>
+     <g id="text_13">
+      <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #142b45" x="244.9" y="313.124595" transform="rotate(-0 244.9 313.124595)">All other services + contingency</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 248.4 104.269091
+L 641.427067 104.269091
+L 641.427067 127.44
+L 248.4 127.44
+z
+" clip-path="url(#pea1483ccf8)" style="fill: #d97706"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 248.4 142.887273
+L 592.581715 142.887273
+L 592.581715 166.058182
+L 248.4 166.058182
+z
+" clip-path="url(#pea1483ccf8)" style="fill: #d97706"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 248.4 181.505455
+L 453.238 181.505455
+L 453.238 204.676364
+L 248.4 204.676364
+z
+" clip-path="url(#pea1483ccf8)" style="fill: #d97706"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 248.4 220.123636
+L 407.518907 220.123636
+L 407.518907 243.294545
+L 248.4 243.294545
+z
+" clip-path="url(#pea1483ccf8)" style="fill: #9aaabd"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 248.4 258.741818
+L 323.48856 258.741818
+L 323.48856 281.912727
+L 248.4 281.912727
+z
+" clip-path="url(#pea1483ccf8)" style="fill: #9aaabd"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 248.4 297.36
+L 297.223091 297.36
+L 297.223091 320.530909
+L 248.4 320.530909
+z
+" clip-path="url(#pea1483ccf8)" style="fill: #9aaabd"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 248.4 331.344
+L 753.48 331.344
+" style="fill: none; stroke: #cbd5e1; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b45" x="646.103733" y="118.452592" transform="rotate(-0 646.103733 118.452592)">US$21.01  (32%)</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b45" x="597.258382" y="157.070774" transform="rotate(-0 597.258382 157.070774)">US$18.40  (28%)</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b45" x="457.914667" y="195.688956" transform="rotate(-0 457.914667 195.688956)">US$10.95  (17%)</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b45" x="412.195573" y="234.307138" transform="rotate(-0 412.195573 234.307138)">US$8.51  (13%)</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b45" x="328.165227" y="272.92532" transform="rotate(-0 328.165227 272.92532)">US$4.01  (6%)</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b45" x="301.899757" y="311.543501" transform="rotate(-0 301.899757 311.543501)">US$2.61  (4%)</text>
+   </g>
+  </g>
+  <g id="text_20">
+   <text style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #142b45" x="45.54" y="23.537344" transform="rotate(-0 45.54 23.537344)">Database, load balancer and public IPs make up 77% of the AWS budget</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #64748b" x="45.54" y="40.356" transform="rotate(-0 45.54 40.356)">Gross launch-planning model; not the exported daily bill</text>
+  </g>
+  <g id="text_22">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #64748b" transform="translate(45.54 397.088437)">Total US$65.49/month before free allowances, credits and tax; one EC2 instance, 730 hours and assumed prototype usage.</text>
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #64748b" transform="translate(45.54 410.138438)">Includes planned CloudFront and other services. Costs differ from a one-day operating snapshot; no exact reconciliation is claimed.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pea1483ccf8">
+   <rect x="248.4" y="93.456" width="505.08" height="237.888"/>
+  </clipPath>
+ </defs>
+</svg>
